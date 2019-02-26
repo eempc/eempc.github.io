@@ -1,3 +1,10 @@
 body {
     background-color: gray;
 }
+
+#container {
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid black;
+}
