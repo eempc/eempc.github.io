@@ -31,7 +31,7 @@ body {
     text-align: center;
 }
 
-.top-project {
+.top-project, .vs-project {
     background-color: rgb(100,100,100);
     width: 100%;
     height: 100%;
@@ -39,7 +39,7 @@ body {
     text-align: center;
 }
 
-.top-project p {
+.top-project p, .vs-project p {
     height: 2em;
 }
 
@@ -55,7 +55,7 @@ body {
     grid-area: o2;
 }
 
-.img-top0 {
+.img-top0, .img-vs0 {
     width: 95%;
     height: auto;
     padding: 0px;
@@ -70,8 +70,20 @@ body {
     text-align: center;
 }
 
+#vs-0 {
+    grid-area: vs0;
+}
 
+#vs-1 {
+    grid-area: vs1;
+}
+
+#vs-2 {
+    grid-area: vs2;
+}
 
 .footer {
     grid-area: f;
+    text-align: center;
+    background-color: rgb(100,100,100);
 }
