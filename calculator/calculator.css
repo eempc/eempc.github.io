@@ -12,6 +12,8 @@ body {
     margin: auto;
     padding: 20px;
     border: 1px solid black;
+    border-radius: 5%;
+    box-shadow: 5px 5px;
 }
 
 #screen {
@@ -28,6 +30,7 @@ body {
     padding-right: 20px;
     border-radius: 5%;
     border: 1px solid black;
+    box-shadow: 1px 1px;
 }
 
 #container {
@@ -53,5 +56,6 @@ body {
     line-height: 3em;
     border-radius: 10%;
     border: 1px solid black;
+    box-shadow: 2px 2px;
 }
 
