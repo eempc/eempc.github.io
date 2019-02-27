@@ -121,13 +121,13 @@ function clearAll() {
     clearScreen1();
     myArray = [];
     clearScreen0();
+    wasTheLastButtonPressedEquals = false;
 }
 
-
-
 function operate() {
+    wasTheLastButtonPressedEquals = true;
     var str = screen1.textContent;
-    console.log(myArray);
+    
     if (str === "." || str === "") {
         //If last element in the array is an operator
         if (operatorsArray.includes(myArray[myArray.length-1])) {
@@ -139,25 +139,27 @@ function operate() {
         clearScreen1();
         updateScreen0();
     }
-    console.log(myArray);
-    wasTheLastButtonPressedEquals = true;
-
-    // Modify the array to do the multiplication and divisions first
+    
+    // Modify the new array to do the multiplication and divisions first
     var newArray = myArray;
 
     for (var i = 0; i < newArray.length; i++) {
         if (newArray[i+1] === "*") {
             newArray.splice(i, 3, parseFloat(newArray[i]) * parseFloat(newArray[i+2])); // Do the multiplication
-            i--;
+            i--; // Go backwards 1 because the array was shortened
         } 
         if (newArray[i+1] === "/") {
-            newArray.splice(i, 3, parseFloat(newArray[i]) / parseFloat(newArray[i+2])); // Do thedivision
+            if (newArray[i+2] == 0) {
+                alert("Divide by 0. Idiot.");
+                clearAll();
+                return;
+            }
+            newArray.splice(i, 3, parseFloat(newArray[i]) / parseFloat(newArray[i+2])); // Do the division
             i--;
         }
     }
     
-
-    // The final leg, we have an array that is only add or subtract
+    // The final leg, an array that is only add or subtract, should be easy right?
     for (var i = 0; i < newArray.length; i++) {
         if (newArray[i+1] === "+") {
             newArray.splice(i, 3, parseFloat(newArray[i]) + parseFloat(newArray[i+2]));
@@ -169,7 +171,7 @@ function operate() {
         }
     }
     
-    screen1.textContent = newArray[0].toFixed(2);
+    screen1.textContent = (newArray[0] % 1 === 0) ? newArray[0] : newArray[0].toFixed(2);
 
     // for (var i = 0; i < myArray.length; i++) {
     //     if (myArray[i] === "*" || myArray[i] === "/") {
