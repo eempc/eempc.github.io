@@ -33,16 +33,26 @@ buttonsOp.forEach(button => {
 var myArray = [];
 
 function screenAppendNumber(x) {
+    if (wasTheLastButtonPressedEquals) {
+        clearAll();
+        wasTheLastButtonPressedEquals = false;
+        
+    }
     screen1.textContent += x;
 }
 
 function screenAppendOperator(op) {
+    wasTheLastButtonPressedEquals = false;
     var str = screen1.textContent;
     if (!(str === "" || str === ".")) {
         myArray.push(str);
         myArray.push(op);
         updateScreen0();
         clearScreen1();
+    } else if (str === "" && screen0.textContent != "") {
+        myArray.pop();
+        myArray.push(op);
+        updateScreen0();
     }
 }
 
@@ -51,11 +61,15 @@ function updateScreen0() {
     for (var i = 0; i < myArray.length; i++) {
         //Detect the negative number and surround with brackets
         if (myArray[i].charAt(0) === "-" && myArray[i].length > 1)
-            fullEquation += "(" + myArray[i] + ")";
+            fullEquation += myArray[i];
         else 
             fullEquation += myArray[i];
     }   
     screen0.textContent = fullEquation;
+}
+
+function clearScreen0() {
+    screen0.textContent = "";
 }
 
 function clearScreen1() {
@@ -63,16 +77,103 @@ function clearScreen1() {
 }
 
 function screenAppendDecimal() {
+    if (wasTheLastButtonPressedEquals) {
+        clearAll();
+        wasTheLastButtonPressedEquals = false;
+    }
     var str = screen1.textContent;
     if (!str.includes(".")) screen1.textContent += ".";
 }
 
 function makeNegative() {
     var str = screen1.textContent;
-    screen1.textContent = "-" + str;
-
+    wasTheLastButtonPressedEquals = false
+    if (!str.includes("-"))
+        screen1.textContent = "-" + str;
 }
 
+function backspace(){
+    if (wasTheLastButtonPressedEquals) {
+        clearAll();
+        wasTheLastButtonPressedEquals = false;
+    }
+    if (screen1.textContent) {
+        screen1.textContent = screen1.textContent.slice(0, -1);
+    }
+}
+
+function clearAll() {
+    clearScreen1();
+    myArray = [];
+    clearScreen0();
+}
+
+var operatorsArray = ["+", "-", "/", "*"];
+var wasTheLastButtonPressedEquals = false;
+
+function operate() {
+    var str = screen1.textContent;
+    console.log(myArray);
+    if (str === "." || str === "") {
+        //If last element in the array is an operator
+        if (operatorsArray.includes(myArray[myArray.length-1])) {
+            myArray.pop();            
+            updateScreen0();
+        }       
+    } else {
+        myArray.push(str);
+        clearScreen1();
+        updateScreen0();
+    }
+    console.log(myArray);
+    wasTheLastButtonPressedEquals = true;
+
+    // Modify the array to do the multiplication and divisions first
+    var newArray = myArray;
+
+    for (var i = 0; i < newArray.length; i++) {
+        if (newArray[i+1] === "*") {
+            newArray.splice(i, 3, parseFloat(newArray[i]) * parseFloat(newArray[i+2])); // Do the multiplication
+            i--;
+        } 
+        if (newArray[i+1] === "/") {
+            newArray.splice(i, 3, parseFloat(newArray[i]) / parseFloat(newArray[i+2])); // Do thedivision
+            i--;
+        }
+    }
+    console.log(newArray);
+
+    // The final leg, we have an array that is only add or subtract
+    var result = newArray[i];
+    for (var i = 0; i < newArray.length; i++) {
+        if (newArray[i+1] === "+") {
+            newArray.splice(i, 3, parseFloat(newArray[i]) + parseFloat(newArray[i+2]));
+            i--;
+        } 
+        if (newArray[i+1] === "-") {
+            newArray.splice(i, 3, parseFloat(newArray[i]) - parseFloat(newArray[i+2]));
+            i--; 
+        }
+    }
+    console.log(newArray);
+    screen1.textContent = newArray[0];
+
+    // for (var i = 0; i < myArray.length; i++) {
+    //     if (myArray[i] === "*" || myArray[i] === "/") {
+    //         var n = strMathsFunctions[myArray[i]](i-1,i+1);
+    //         myArray.splice(i-1,3,n);
+    //         i--;
+    //     }
+    // }
+    // console.log(myArray);
+};
+
+var strMathsFunctions = {
+    '+': function (x, y) { return x + y },
+    '-': function (x, y) { return x - y },
+    '/': function (x, y) { return x / y },
+    '*': function (x, y) { return x * y },
+};
 
 /* // Functions //
 

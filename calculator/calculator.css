@@ -29,6 +29,7 @@ body {
     box-shadow: -1px -1px;
     border-radius: 2.5%;
     height: 2em;
+    overflow: auto;
 }
 
 #screen1 {
