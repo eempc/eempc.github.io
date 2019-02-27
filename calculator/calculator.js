@@ -3,7 +3,9 @@ const screen = document.getElementById("screen");
 const buttonsNum = document.querySelectorAll(".num");
 const buttonsOp = document.querySelectorAll(".op");
 
-// Add press effect for all buttons
+// Buttons setup here //
+
+// All buttons get the press effect
 buttons.forEach(button => {
     button.addEventListener("mouseup", function (e) {
         e.target.style.boxShadow = "2px 2px";
@@ -13,26 +15,39 @@ buttons.forEach(button => {
     });
 });
 
+// Number buttons access this function
 buttonsNum.forEach(button => {
     button.addEventListener("click", function (e) {
         screenAppendNumber(e.target.textContent);
     });
 });
 
+// Operator buttons access this function
 buttonsOp.forEach(button => {
     button.addEventListener("click", function (e) {
         screenAppendOperator(e.target.textContent);
     });
 });
 
+// Functions //
+
 function screenAppendNumber(x) {
+    if (wasTheLastButtonPressedEquals) {
+        clearScreen();
+        wasTheLastButtonPressedEquals = false;
+    }
     screen.textContent += x;
+    wasTheLastButtonPressedEquals = false;
 }
 
 let currentOperator = "";
 
 function screenAppendOperator(x) {
-    if (!operatorPresent()) {
+    wasTheLastButtonPressedEquals = false;
+    if (screen.textContent === "." || screen.textContent === "") {
+
+    }
+    else if (!operatorPresent()) {
         screen.textContent += x;
         currentOperator = x;
     } else {
@@ -45,6 +60,10 @@ function screenAppendOperator(x) {
 // First is to split string into array and count the array.length
 // Second is to use .includes
 function screenAppendDecimal() {
+    if (wasTheLastButtonPressedEquals) {
+        clearScreen();
+        wasTheLastButtonPressedEquals = false;
+    }
     var str = screen.textContent;
     if (!operatorPresent() && str.split(".").length-1 == 0) {
         screen.textContent += ".";
@@ -55,20 +74,27 @@ function screenAppendDecimal() {
     }
 }
 
-// Find operator from screen (alternatively could check the var currentOperator)
+// Find operator from screen (alternatively could check the var = currentOperator)
 function operatorPresent() {
     var str = screen.textContent;
     return (str.includes("*") || str.includes("/") || str.includes("+") || str.includes("-"));
 }
 
 function backspace() {
+    if (wasTheLastButtonPressedEquals) {
+        clearScreen();
+        wasTheLastButtonPressedEquals = false;
+    }
     if (screen.textContent)
         screen.textContent = screen.textContent.slice(0, -1);
 }
 
 function clearScreen() {
     screen.textContent = "";
+    wasTheLastButtonPressedEquals = false;
 }
+
+var wasTheLastButtonPressedEquals = false;
 
 function operate() {
     var str = screen.textContent;
@@ -80,9 +106,12 @@ function operate() {
     if (operatorPresent() && lastChar !== currentOperator) {        
         var result = basicMathsFunctions[currentOperator](num1, num2);
         screen.textContent = result;
+        currentOperator = "";
+        wasTheLastButtonPressedEquals = true;
     }
 }
 
+// Access these obj functions by e.g. basicMathsFunctions["+"](5,3) resulting in 8
 var basicMathsFunctions = {
     '+': function (x, y) { return x + y },
     '-': function (x, y) { return x - y },
