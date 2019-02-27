@@ -125,6 +125,10 @@ function clearAll() {
 }
 
 function operate() {
+    if (wasTheLastButtonPressedEquals) {
+        // Maybe one day I will do the continuous multiplier
+        return;
+    }
     wasTheLastButtonPressedEquals = true;
     var str = screen1.textContent;
     
