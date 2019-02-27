@@ -111,6 +111,17 @@ function operate() {
     }
 }
 
+function makeNegative() {
+    var str = screen.textContent;
+    // Problem here minus is the same as negative :(
+}
+
+function random() {
+    clearScreen();
+    screen.textContent = Math.random().toFixed(2);
+    wasTheLastButtonPressedEquals = false;
+}
+
 // Access these obj functions by e.g. basicMathsFunctions["+"](5,3) resulting in 8
 var basicMathsFunctions = {
     '+': function (x, y) { return x + y },
