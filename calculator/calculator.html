@@ -24,34 +24,34 @@
       <div id="header">
         <h1>Calculator</h1>
       </div>
-      <div id="screen">
-        Display
-      </div>
+
+      <div id="screen"></div>
+
       <div id="container">
-          <div class="button">MC</div>
+          <div class="button">(-)</div>
           <div class="button">MR</div>
-          <div class="button">BK</div>
-          <div class="button">CA</div>
+          <div class="button" id="backspace" onclick="backspace()">BK</div>
+          <div class="button" id="clear-all" onclick="clearScreen()">CA</div>
 
-          <div class="button">7</div>
-          <div class="button">8</div>
-          <div class="button">9</div>
-          <div class="button">/</div>
+          <div class="button num">7</div>
+          <div class="button num">8</div>
+          <div class="button num">9</div>
+          <div class="button op">/</div>
 
-          <div class="button">4</div>
-          <div class="button">5</div>
-          <div class="button">6</div>
-          <div class="button">*</div>
+          <div class="button num">4</div>
+          <div class="button num">5</div>
+          <div class="button num">6</div>
+          <div class="button op">*</div>
 
-          <div class="button">1</div>
-          <div class="button">2</div>
-          <div class="button">3</div>
-          <div class="button">-</div>
+          <div class="button num">1</div>
+          <div class="button num">2</div>
+          <div class="button num">3</div>
+          <div class="button op">-</div>
 
-          <div class="button">0</div>
-          <div class="button">.</div>
-          <div class="button">=</div>
-          <div class="button">+</div>
+          <div class="button num">0</div>
+          <div class="button decimal" onclick="screenAppendDecimal()">.</div>
+          <div class="button" onclick="operate()">=</div>
+          <div class="button op">+</div>
       </div>
     </div>
     <script src="calculator.js" async defer></script>
