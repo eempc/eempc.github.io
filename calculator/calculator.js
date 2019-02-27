@@ -169,7 +169,7 @@ function operate() {
         }
     }
     
-    screen1.textContent = newArray[0];
+    screen1.textContent = newArray[0].toFixed(2);
 
     // for (var i = 0; i < myArray.length; i++) {
     //     if (myArray[i] === "*" || myArray[i] === "/") {
