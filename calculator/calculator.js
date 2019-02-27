@@ -30,8 +30,13 @@ buttonsOp.forEach(button => {
     });
 });
 
+// Empty array will have numbers and operators pushed to it
 var myArray = [];
 
+var operatorsArray = ["+", "-", "/", "*"]; // Just to be able to access these with a foreach or includes
+var wasTheLastButtonPressedEquals = false; // Detect if the calculator just calculated something or not
+
+// Function for numbers buttons
 function screenAppendNumber(x) {
     if (wasTheLastButtonPressedEquals) {
         clearAll();
@@ -41,18 +46,28 @@ function screenAppendNumber(x) {
     screen1.textContent += x;
 }
 
+// Function for the operator buttons (is more complicated when trying to mimic an old school calculator)
 function screenAppendOperator(op) {
-    wasTheLastButtonPressedEquals = false;
     var str = screen1.textContent;
-    if (!(str === "" || str === ".")) {
+
+    if (wasTheLastButtonPressedEquals) {
+        wasTheLastButtonPressedEquals = false
+        myArray = [];
         myArray.push(str);
         myArray.push(op);
         updateScreen0();
         clearScreen1();
-    } else if (str === "" && screen0.textContent != "") {
-        myArray.pop();
-        myArray.push(op);
-        updateScreen0();
+    } else {
+        if (!(str === "" || str === ".")) {
+            myArray.push(str);
+            myArray.push(op);
+            updateScreen0();
+            clearScreen1();
+        } else if (str === "" && screen0.textContent != "") {
+            myArray.pop();
+            myArray.push(op);
+            updateScreen0();
+        }
     }
 }
 
@@ -108,8 +123,7 @@ function clearAll() {
     clearScreen0();
 }
 
-var operatorsArray = ["+", "-", "/", "*"];
-var wasTheLastButtonPressedEquals = false;
+
 
 function operate() {
     var str = screen1.textContent;
@@ -141,10 +155,9 @@ function operate() {
             i--;
         }
     }
-    console.log(newArray);
+    
 
     // The final leg, we have an array that is only add or subtract
-    var result = newArray[i];
     for (var i = 0; i < newArray.length; i++) {
         if (newArray[i+1] === "+") {
             newArray.splice(i, 3, parseFloat(newArray[i]) + parseFloat(newArray[i+2]));
@@ -155,7 +168,7 @@ function operate() {
             i--; 
         }
     }
-    console.log(newArray);
+    
     screen1.textContent = newArray[0];
 
     // for (var i = 0; i < myArray.length; i++) {
