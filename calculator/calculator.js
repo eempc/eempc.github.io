@@ -9,14 +9,14 @@ buttons.forEach(button => {
         e.target.style.boxShadow = "2px 2px";
     });
     button.addEventListener("mousedown", function (e) {
-        e.target.style.boxShadow = "-2px -2px";     
+        e.target.style.boxShadow = "-2px -2px";
     });
 });
 
 buttonsNum.forEach(button => {
     button.addEventListener("click", function (e) {
         screenAppendNumber(e.target.textContent);
-    }); 
+    });
 });
 
 buttonsOp.forEach(button => {
@@ -31,7 +31,7 @@ function screenAppendNumber(x) {
 
 let currentOperator = "";
 
-function screenAppendOperator(x) {    
+function screenAppendOperator(x) {
     if (!operatorPresent()) {
         screen.textContent += x;
         currentOperator = x;
@@ -41,26 +41,21 @@ function screenAppendOperator(x) {
     }
 }
 
+// Two methods of detecting decimals here
+// First is to split string into array and count the array.length
+// Second is to use .includes
 function screenAppendDecimal() {
     var str = screen.textContent;
-
-    // Two methods of detecting decimals here
-    // First is to split string into array and count the array.length
-    // Second is to use .includes
     if (!operatorPresent() && str.split(".").length-1 == 0) {
         screen.textContent += ".";
-    }
-
-    else if (operatorPresent()) {
+    } else if (operatorPresent()) {
         let opIndex = str.indexOf(currentOperator);
         var hasDecimal = str.includes(".", opIndex);
-        
-        if (!hasDecimal) {
-            screen.textContent += ".";
-        }
+        if (!hasDecimal) screen.textContent += ".";        
     }
 }
 
+// Find operator from screen (alternatively could check the var currentOperator)
 function operatorPresent() {
     var str = screen.textContent;
     return (str.includes("*") || str.includes("/") || str.includes("+") || str.includes("-"));
@@ -76,6 +71,21 @@ function clearScreen() {
 }
 
 function operate() {
+    var str = screen.textContent;
+    var lastChar = str.charAt(str.length-1);
+    var num1 = parseFloat(str.substring(0,str.indexOf(currentOperator)));
+    var num2 = parseFloat(str.substring(str.indexOf(currentOperator)+1));
+    console.log(num1 + " " + num2);
 
+    if (operatorPresent() && lastChar !== currentOperator) {        
+        var result = basicMathsFunctions[currentOperator](num1, num2);
+        screen.textContent = result;
+    }
 }
 
+var basicMathsFunctions = {
+    '+': function (x, y) { return x + y },
+    '-': function (x, y) { return x - y },
+    '/': function (x, y) { return x / y },
+    '*': function (x, y) { return x * y },
+}
