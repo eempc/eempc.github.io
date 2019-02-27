@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html class="no-js">
   <head>
     <meta charset="utf-8" />
@@ -11,16 +12,20 @@
   <body>
     <div id="frame">
       <div id="header">
-        <h1>Positive number calculator</h1>
+        <h1>Dual screen calculator</h1>
       </div>
 
-      <div id="screen"></div>
+      
+      <div class="screen">
+        <p id="screen0"></p>
+        <p id="screen1"></p>
+      </div>
 
       <div id="container">
-          <div class="button">On</div>
+          <div class="button" onclick="makeNegative()">(-)</div>
           <div class="button" onclick="random()">R</div>
-          <div class="button" id="backspace" onclick="backspace()">Back</div>
-          <div class="button" id="clear-all" onclick="clearScreen()">Clear</div>
+          <div class="button" onclick="backspace()">Back</div>
+          <div class="button" onclick="clearScreen()">Clear</div>
 
           <div class="button num">7</div>
           <div class="button num">8</div>

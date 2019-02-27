@@ -1,5 +1,6 @@
 const buttons = document.querySelectorAll(".button");
-const screen = document.getElementById("screen");
+const screen0 = document.getElementById("screen0");
+const screen1 = document.getElementById("screen1");
 const buttonsNum = document.querySelectorAll(".num");
 const buttonsOp = document.querySelectorAll(".op");
 
@@ -29,7 +30,51 @@ buttonsOp.forEach(button => {
     });
 });
 
-// Functions //
+var myArray = [];
+
+function screenAppendNumber(x) {
+    screen1.textContent += x;
+}
+
+function screenAppendOperator(op) {
+    var str = screen1.textContent;
+    if (!(str === "" || str === ".")) {
+        myArray.push(str);
+        myArray.push(op);
+        updateScreen0();
+        clearScreen1();
+    }
+}
+
+function updateScreen0() {
+    var fullEquation = "";
+    for (var i = 0; i < myArray.length; i++) {
+        //Detect the negative number and surround with brackets
+        if (myArray[i].charAt(0) === "-" && myArray[i].length > 1)
+            fullEquation += "(" + myArray[i] + ")";
+        else 
+            fullEquation += myArray[i];
+    }   
+    screen0.textContent = fullEquation;
+}
+
+function clearScreen1() {
+    screen1.textContent = "";
+}
+
+function screenAppendDecimal() {
+    var str = screen1.textContent;
+    if (!str.includes(".")) screen1.textContent += ".";
+}
+
+function makeNegative() {
+    var str = screen1.textContent;
+    screen1.textContent = "-" + str;
+
+}
+
+
+/* // Functions //
 
 function screenAppendNumber(x) {
     if (wasTheLastButtonPressedEquals) {
@@ -129,3 +174,4 @@ var basicMathsFunctions = {
     '/': function (x, y) { return x / y },
     '*': function (x, y) { return x * y },
 }
+ */
