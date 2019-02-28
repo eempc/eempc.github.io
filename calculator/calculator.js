@@ -30,6 +30,30 @@ buttonsOp.forEach(button => {
   });
 });
 
+// Keyboard set up (simple method)
+document.onkeypress = function (e) {
+  
+  if (e.keyCode == 13) {
+    operate();
+  } else if (e.key >= 0 && e.key <= 9) {
+    screenAppendNumber(e.key);
+  } else if (e.key == ".") {
+    screenAppendDecimal();
+  } else if (e.keyCode >= 42 && e.keyCode <= 47 && e.keyCode != 44) {
+    screenAppendOperator(e.key);
+  }
+
+}
+
+// Keyboard setup event listener method
+document.addEventListener("keydown", keyCheck);
+
+function keyCheck(e) {
+  console.log(e.key); 
+  if (e.key == "Backspace") backspace();
+  if (e.key == "Delete") clearAll();
+}
+
 // Empty array will have numbers and operators pushed to it
 var myArray = [];
 
@@ -122,6 +146,8 @@ function clearAll() {
 }
 
 function operate() {
+  if (screen0.textContent == "") return;
+
   if (wasTheLastButtonPressedEquals) {
     // Maybe one day I will do the continuous multiplier
     return;
