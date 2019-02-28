@@ -59,6 +59,7 @@ var myArray = [];
 
 var operatorsArray = ["+", "-", "/", "*"]; // Just to be able to access these with a foreach or includes
 var wasTheLastButtonPressedEquals = false; // Detect if the calculator just calculated something or not
+// Maybe switch to an enum state machine?
 
 // Function for numbers buttons
 function screenAppendNumber(x) {
@@ -142,6 +143,14 @@ function clearAll() {
   clearScreen1();
   myArray = [];
   clearScreen0();
+  wasTheLastButtonPressedEquals = false;
+}
+
+function random() {
+  if (wasTheLastButtonPressedEquals) {
+    clearAll();    
+  }
+  screen1.textContent = Math.random().toFixed(2);
   wasTheLastButtonPressedEquals = false;
 }
 
