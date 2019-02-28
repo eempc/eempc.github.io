@@ -30,9 +30,8 @@ buttonsOp.forEach(button => {
   });
 });
 
-// Keyboard set up (simple method)
+// Keyboard setup (simple method)
 document.onkeypress = function (e) {
-  
   if (e.keyCode == 13) {
     operate();
   } else if (e.key >= 0 && e.key <= 9) {
@@ -49,7 +48,7 @@ document.onkeypress = function (e) {
 document.addEventListener("keydown", keyCheck);
 
 function keyCheck(e) {
-  console.log(e.key); 
+  //console.log(e.key); 
   if (e.key == "Backspace") backspace();
   if (e.key == "Delete") clearAll();
 }
@@ -181,9 +180,7 @@ function operate() {
 
     for (var i = 0; i < newArray.length; i++) {
       if (newArray[i + 1] === "*") {
-        newArray.splice(i,3,
-          parseFloat(newArray[i]) * parseFloat(newArray[i + 2])
-        ); // Do the multiplication
+        newArray.splice(i,3,parseFloat(newArray[i]) * parseFloat(newArray[i + 2])); // Do the multiplication
         i--; // Go backwards 1 because the array was shortened
       }
       if (newArray[i + 1] === "/") {
@@ -192,9 +189,7 @@ function operate() {
           clearAll();
           return;
         }
-        newArray.splice(i, 3,
-          parseFloat(newArray[i]) / parseFloat(newArray[i + 2])
-        ); // Do the division
+        newArray.splice(i, 3, parseFloat(newArray[i]) / parseFloat(newArray[i + 2])); // Do the division
         i--;
       }
     }
@@ -202,15 +197,11 @@ function operate() {
     // The final leg, an array that is only add or subtract, should be easy right?
     for (var i = 0; i < newArray.length; i++) {
       if (newArray[i + 1] === "+") {
-        newArray.splice(i, 3,
-          parseFloat(newArray[i]) + parseFloat(newArray[i + 2])
-        );
+        newArray.splice(i, 3, parseFloat(newArray[i]) + parseFloat(newArray[i + 2]));
         i--;
       }
       if (newArray[i + 1] === "-") {
-        newArray.splice(i, 3,
-          parseFloat(newArray[i]) - parseFloat(newArray[i + 2])
-        );
+        newArray.splice(i, 3, parseFloat(newArray[i]) - parseFloat(newArray[i + 2]));
         i--;
       }
     }
