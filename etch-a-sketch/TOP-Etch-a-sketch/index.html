@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="frame-gap"><h1>Etch-a-Sketch</h1>  </div>
+      <div id="container"><!--The drawing panel is created by the script--></div>
+      <div class="controls-buttons">
+        <button onclick="newGrid()">New grid</button>
+        <div class="controls-colour">
+          <span>Colour choice</span><br />
+          <input type="radio" id="red-radio" name="colour-radios" />
+          <label for="red-radio">Black</label>
+          <input type="radio" id="random-radio" name="colour-radios" />
+          <label for="random-radio">Random</label>
+        </div>
+        <button onclick="resetColours()">Reset grid</button>
+      </div>
+
+      <div class="frame-gap"></div>
+    </div>
+
+    <script src="index.js" async defer></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@ const buttonsOp = document.querySelectorAll(".op");
 
 // Buttons setup here //
 
-// All buttons get the press effect
+// All buttons get the press aesthetic effect
 buttons.forEach(button => {
   button.addEventListener("mouseup", function(e) {
     e.target.style.boxShadow = "2px 2px";
@@ -33,7 +33,7 @@ buttonsOp.forEach(button => {
 // Keyboard setup (simple method)
 document.onkeypress = function (e) {
   if (e.keyCode == 13) {
-    operate();
+    operate(); // 13 is the Enter keyCode
   } else if (e.key >= 0 && e.key <= 9) {
     screenAppendNumber(e.key);
   } else if (e.key == ".") {
@@ -41,7 +41,6 @@ document.onkeypress = function (e) {
   } else if (e.keyCode >= 42 && e.keyCode <= 47 && e.keyCode != 44) {
     screenAppendOperator(e.key);
   }
-
 }
 
 // Keyboard setup event listener method
@@ -122,10 +121,11 @@ function screenAppendDecimal() {
   if (!str.includes(".")) screen1.textContent += ".";
 }
 
-function makeNegative() {
+function toggleNegative() {
   var str = screen1.textContent;
   wasTheLastButtonPressedEquals = false;
   if (!str.includes("-")) screen1.textContent = "-" + str;
+  else screen1.textContent = screen1.textContent.substring(1);
 }
 
 function backspace() {
