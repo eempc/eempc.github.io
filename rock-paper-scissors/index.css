@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+body {
+    font-family: Arial;
+    background-color: rgb(138, 137, 137);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'h h h h h h'
+        's1 s1 s1 s2 s2 s2'
+        'p1 r r r r p2'
+        'b1 b1 b2 b2 b3 b3'
+        'f f f f f f'
+    ;
+    max-width: 1000px;
+    margin: 5px auto 5px auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+div {
+    align-content: center;
+}
+
+.header {
+    grid-area: h;
+
+}
+
+.middle {
+    border: 1px solid black;
+    padding: 2em;
+    margin: 10px;
+    border-radius: 5%;
+}
+
+#status1 {
+    grid-area: s1;
+}
+
+#status2 {
+    grid-area: s2;
+}
+
+#p1 {
+    grid-area: p1;
+}
+
+#result {
+    grid-area: r;
+    margin: auto;
+    font-size: 2em;
+}
+
+#p2 {
+    grid-area: p2;
+}
+
+.buttons {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    align-content: center;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10%;
+    box-shadow: 2px 2px;
+    background-color: rgb(150, 137, 137);
+}
+
+#button1 {
+    grid-area: b1;
+}
+
+#button2 {
+    grid-area: b2;
+}
+
+#button3 {
+    grid-area: b3;
+}
+
+.footer {
+    grid-area: f;
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-areas:
+            'h h h h h h'
+            's1 s1 s1 s1 s1 s1'
+            's2 s2 s2 s2 s2 s2'
+            'p1 p1 p1 p2 p2 p2'
+            'r r r r r r'
+            'b1 b1 b2 b2 b3 b3'
+            'f f f f f f'
+        ;
+    }
+}
