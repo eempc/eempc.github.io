@@ -1,88 +1,85 @@
-body {
-    background-color: gray;
+* {
+    border: 1px dotted black;
 }
 
 #container {
     display: grid;
+    grid-template-areas:
+        'h1 h1 h1 h2 h2 h2'
+        'm m m m m m'
+        's s s s s s'
+        'b1 b1 b2 b2 b3 b3'
+        ;
     max-width: 1200px;
-    margin: auto;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: 
-    'h h h h h h'
-    's s s s s s'
-    'o0 o0 o1 o1 o2 o2'
-    's1 s1 s1 s1 s1 s1'
-    'vs0 vs0 vs1 vs1 vs2 vs2'
-    'f f f f f f'
-    ;
-    grid-gap: 4px;
+    margin: 10px auto;
+    border: 1px solid black;
 }
 
-#header {
-    grid-area: h;
-    background-color: rgb(100,100,100);
-    text-align: center;
+#top-left {
+    grid-area: h1;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-#subheading-0 {
-    grid-area: s;   
-    background-color: rgb(100,100,100);
-    text-align: center;
+#top-left > * {
+    padding: 1.5em;
 }
 
-.top-project, .vs-project {
-    background-color: rgb(100,100,100);
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    text-align: center;
+#top-right {
+    grid-area: h2;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.top-project p, .vs-project p {
-    height: 2em;
+#top-right > * {
+
+    padding: 1.5em;
 }
 
-#top-0 {
-    grid-area: o0;    
+#profile-pic {
+    width: 240px;
+    height: 240px;
 }
 
-#top-1 {
-    grid-area: o1;
+#profile > * {
+    max-width: 500px;
 }
 
-#top-2 {
-    grid-area: o2;
+#middle {
+    grid-area: m;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-.img-top0, .img-vs0 {
-    width: 95%;
-    height: auto;
-    padding: 0px;
-    margin: 0px;
-    border: 1px solid blue;
-    align-content: center;
+#middle > * {
+
 }
 
-#subheading-1 {
-    grid-area: s1;
-    background-color: rgb(100,100,100);
-    text-align: center;
+#subheading {
+    grid-area: s;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
-#vs-0 {
-    grid-area: vs0;
+.skill-box {
+    flex-direction: column;
+    align-items: center;
 }
 
-#vs-1 {
-    grid-area: vs1;
+#box1 {
+    grid-area: b1;
 }
 
-#vs-2 {
-    grid-area: vs2;
+#box2 {
+    grid-area: b2;
 }
 
-.footer {
-    grid-area: f;
-    text-align: center;
-    background-color: rgb(100,100,100);
+#box3 {
+    grid-area: b3;
+}
+
+.content {
+    display: flex;
 }
