@@ -1,28 +1,45 @@
 * {
-    border: 0px dotted black;
+    border: 1px dotted transparent;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: lightgray;
-    border: 1px solid black;
+    background-color: darkgray;
 }
 
 #container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-        'h1 h1 h1 h2 h2 h2'
-        'm m m m m m'
-        's s s s s s'
-        'b1 b1 b2 b2 b3 b3'
-        ;
-    max-width: 1920px;
+    grid-template-areas: 
+        'h1 h1 h1 h2 h2 h2' 
+        'm m m m m m' 
+        's s s s s s' 
+        'b1 b1 b1 b1 b1 b1';
+    max-width: 1200px;
     margin: 0px auto;
+    background-color: lightgray;
 }
 
 .top-row {
     align-items: center;
     background-color: rgb(55,100,232);
+}
+
+.top-row > * {
+    padding: 5px 15px;
+    margin: 10px 1px;
+    color: azure;
+    text-decoration: none;
+    font-size: 1em;
+    width: 150px;
+    text-align: center;
+    
+}
+
+.top-row > *:hover {
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    transition: 0.4s;
 }
 
 #top-left {
@@ -31,7 +48,7 @@ body {
 }
 
 #top-left > * {
-    padding: 1.5em;
+    
 }
 
 #top-right {
@@ -41,20 +58,35 @@ body {
 
 #top-right > * {
 
-    padding: 1.5em;
+    
 }
 
 #profile-pic {
     max-width: 160px;
-    margin: 10px;
+    max-height: 160px;
+    margin: 0px 10px;
 }
 
-#profile > * {
-    max-width: 500px;
-    margin: 20px;
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 10px;
+    max-height: 160px;
+    height: 160px;
 }
 
-#middle {
+    #profile > * {
+        max-width: 500px;
+        margin: 10px 0px;
+        color: azure;
+    }
+
+h1 {
+    font-size: 3.5em;
+}
+
+#profile-section {
     grid-area: m;
     justify-content: center;
     align-items: center;
@@ -63,11 +95,8 @@ body {
     background-color: rgb(74,167,255);
 }
 
-#middle > * {
 
-}
-
-#skills {
+#main {
     grid-area: s;
     justify-content: center;
     align-items: center;
@@ -76,8 +105,9 @@ body {
     background-color: lightgray;
 }
 
-#skills > * {
+#main > * {
     max-width: 800px;
+    margin: 10px auto;
 }
 
 #subheading > * {
@@ -85,17 +115,19 @@ body {
 }
 
 .skill-box {
+    display: flex;
     flex-direction: column;
     background-color: lavender;
-    border: 1px solid black;
+    border: 0px solid black;
     padding: 20px;
-    margin: 20px;
+    margin: 25px;
+    align-items: center;
+    width: 250px;
+    max-width: 250px;
+    box-shadow: 1px 1px 1px 1px #D8DDFF;
 }
 
-
-
 .skill-box img {
-    align-self: center;
     margin: 5px;
     width: 50px;
     height: 50px;
@@ -106,26 +138,19 @@ body {
 }
 
 
-
-#box1 {
-    grid-area: b1;
-    
-}
-
-#box2 {
-    grid-area: b2;
-    
-}
-
-#box3 {
-    grid-area: b3;
-    
-}
-
 .content {
     display: flex;
 }
 
+#skill-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: b1;
+}
+
+
 ul {
-    margin: 10px;
+    margin: 0px 30px;
+    align-self: flex-start;
 }
