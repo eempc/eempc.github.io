@@ -10,19 +10,21 @@ body {
 #container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: 
-        'h1 h1 h1 h2 h2 h2' 
-        'm m m m m m' 
-        's s s s s s' 
-        'b1 b1 b1 b1 b1 b1';
+    grid-template-areas: 'h1 h1 h1 h2 h2 h2' 'm m m m m m' 's s s s s s' 'b1 b1 b1 b1 b1 b1';
     max-width: 1200px;
     margin: 0px auto;
     background-color: lightgray;
+    box-shadow: 1px 1px #b9b7b7;
+}
+
+.content {
+    margin: -1px;
 }
 
 .top-row {
     align-items: center;
     background-color: rgb(55,100,232);
+    
 }
 
 .top-row > * {
@@ -30,16 +32,28 @@ body {
     margin: 10px 1px;
     color: azure;
     text-decoration: none;
-    font-size: 1em;
-    width: 150px;
+    
+    
     text-align: center;
     
 }
 
-.top-row > *:hover {
+.top-left-logo {
+    
+    border-radius: 50%;
+    padding: 10px; 
+}
+
+.top-left-logo:hover {
+    background-color: black;
+    transition: 0.4s;
+}
+
+#top-right > *:hover {
     font-weight: bold;
     border-bottom: 1px solid white;
-    transition: 0.4s;
+    transition: 0.6s;
+    
 }
 
 #top-left {
@@ -57,8 +71,8 @@ body {
 }
 
 #top-right > * {
-
-    
+    width: 120px;
+        
 }
 
 #profile-pic {
@@ -131,6 +145,9 @@ h1 {
     margin: 5px;
     width: 50px;
     height: 50px;
+    border-radius: 50%;
+    border: 0;
+    background-color: lightblue;
 }
 
 .skill-box h3 {
