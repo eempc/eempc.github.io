@@ -8,12 +8,11 @@ body {
     display: grid;
     max-width: 960px;
     margin: auto;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
-#container, .controls.buttons, .controls-colour {
+#container, .controls.buttons {
     max-width: 960px;
-    margin: auto;
 }
 
 .grid-cell {
@@ -42,21 +41,19 @@ main {
 
 .frame {
     background-color: rgb(179, 5, 5);
-
-    margin: auto;
+    max-width: 1100px;
     border-radius: 10%;
-    box-shadow: 5px 5px;
-    border: 2px solid black;
+    border: 1px solid black;
     text-align: center;
-    max-height: 100%;
+    margin: auto;
 }
 
 button {
     border-radius: 50%;
-    height: 10em;
-    width: 10em;
+    height: 8em;
+    width: 8em;
 }
 
-.frame-gap {
+.frame-head {
     height: 100px;
 }

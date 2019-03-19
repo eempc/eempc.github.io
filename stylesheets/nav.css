@@ -3,8 +3,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgb(60, 84, 219);
-max-width: 1200px;
-margin: 0px auto;
+    max-width: 1200px;
+    margin: 0px auto;
 }
 
 #top-left {
@@ -21,6 +21,8 @@ margin: 0px auto;
 .top-left-logo:hover {
     background-color: rgb(44, 137, 224);
     transition: 0.4s;
+
+
 }
 
 #top-right {
@@ -45,6 +47,7 @@ margin: 0px auto;
     font-weight: bold;
     border-bottom: 1px solid white;
     transition: 0.3s;
+
     background-color: rgb(44, 137, 224);
     padding: 20px;
 }
@@ -66,7 +69,6 @@ margin: 0px auto;
     padding: 12px;
     text-decoration: none;
     display: block;
-
     background-color: rgba(10, 10, 189, 0.822);
     border-bottom: 1px solid transparent;
 }
