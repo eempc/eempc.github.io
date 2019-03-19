@@ -24,7 +24,7 @@ body {
 
 .top-left-logo {
     border-radius: 50%;
-    padding: 10px 10px;
+    padding: 10px;
     margin: 0px 10px;
 }
 
@@ -38,23 +38,66 @@ body {
     justify-content: flex-end;
 }
 
-#top-right>* {
-    width: 120px;
+#top-right > * {
+    width: 160px;
+    text-align: center;
+}
+
+.top-link {
     color: azure;
     text-align: center;
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    padding: 10px;
+    padding: 20px;
 }
 
-#top-right>*:hover {
+.top-link:hover {
     font-weight: bold;
     border-bottom: 1px solid white;
     transition: 0.3s;
     background-color: rgb(44, 137, 224);
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    margin-top: 25px;
+    background-color: rgba(10, 10, 189, 0.822);
+    border-bottom: 1px solid transparent;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(44, 137, 224);
+    border-bottom: 1px solid white;
+    transition: 0.4s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: 0.5s;
+}
+
+/* Read this as on hover of .dropdown, do the following to #portfolio-link*/
+.dropdown:hover #portfolio-link {
+    background-color: rgb(44, 137, 224);
+    font-weight: bold;
+    transition: 0.4s;
+}
 
 #second-row {
     display: flex;
@@ -65,7 +108,6 @@ body {
 }
 
 #profile-pic {
-    grid-area: i;
     max-width: 200px;
 }
 
@@ -106,7 +148,7 @@ h2 {
     justify-content: space-around;
     align-items: space-around;
     background-color: lightgray;
-    padding: 20px 10%;
+    padding: 20px 10% 60px 10%;
 }
 
 .skill-box {
