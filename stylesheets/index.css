@@ -1,0 +1,132 @@
+* {
+
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: darkgray;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(60, 84, 219);
+
+}
+
+#top-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.top-left-logo {
+    border-radius: 50%;
+    padding: 10px 10px;
+    margin: 0px 10px;
+}
+
+.top-left-logo:hover {
+    background-color: rgb(44, 137, 224);
+    transition: 0.4s;
+}
+
+#top-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#top-right>* {
+    width: 120px;
+    color: azure;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding: 10px;
+}
+
+#top-right>*:hover {
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    transition: 0.3s;
+    background-color: rgb(44, 137, 224);
+}
+
+
+
+#second-row {
+    display: flex;
+    padding: 30px 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(55, 100, 232);
+}
+
+#profile-pic {
+    grid-area: i;
+    max-width: 200px;
+}
+
+#profile-name {
+    color: azure;
+    max-width: 600px;
+}
+
+#profile-text {
+    color: azure;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+#third-row {
+    background-color: lightgray;
+}
+
+#third-row > * {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#third-row p {
+    padding: 20px;
+}
+
+#fourth-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    background-color: lightgray;
+    padding: 20px 10%;
+}
+
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    background-color: lavender;
+    padding: 20px;
+    align-items: center;
+    width: 230px;
+    box-shadow: 1px 1px 1px 1px #D8DDFF;
+}
+
+.skill-box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    background-color: lightblue;
+}
+
+ul {
+    align-self: flex-start;
+}
