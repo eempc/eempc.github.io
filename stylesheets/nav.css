@@ -1,0 +1,90 @@
+#top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(60, 84, 219);
+max-width: 1200px;
+margin: 0px auto;
+}
+
+#top-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.top-left-logo {
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.top-left-logo:hover {
+    background-color: rgb(44, 137, 224);
+    transition: 0.4s;
+}
+
+#top-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#top-right>* {
+    width: 160px;
+    text-align: center;
+}
+
+.top-link {
+    color: azure;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+}
+
+.top-link:hover {
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    transition: 0.3s;
+    background-color: rgb(44, 137, 224);
+    padding: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+
+    background-color: rgba(10, 10, 189, 0.822);
+    border-bottom: 1px solid transparent;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(44, 137, 224);
+    border-bottom: 1px solid white;
+    transition: 0.4s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: 0.5s;
+}
+
+/* Read this as onHover of .dropdown, do the following to #portfolio-link*/
+.dropdown:hover #portfolio-link {
+    background-color: rgb(44, 137, 224);
+    font-weight: bold;
+    transition: 0.4s;
+}

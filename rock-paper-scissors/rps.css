@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 body {
     font-family: Arial;
-    background-color: rgb(138, 137, 137);
+    background-color: darkgray;
+    margin: auto;
 }
 
 .grid-container {
@@ -18,10 +19,8 @@ body {
         'b1 b1 b2 b2 b3 b3'
         'f f f f f f'
     ;
-    max-width: 1000px;
-    margin: 5px auto 5px auto;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 div {
@@ -30,7 +29,7 @@ div {
 
 .header {
     grid-area: h;
-
+    background-color: rgb(55, 100, 232);
 }
 
 .middle {

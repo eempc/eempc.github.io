@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Etch-A-Sketch</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="eas.css" />
+  <link rel="stylesheet" href="../stylesheets/nav.css" />
+</head>
+
+<body>
+  <header id="top-row">
+    <div id="top-left">
+      <a href="">
+        <img class="top-left-logo" src="../images/GitHub-Mark-Light-32px.png" id="git-logo" />
+      </a>
+    </div>
+    <nav id="top-right">
+      <div><a href="../index.html" class="top-link">Home</a></div>
+      <div><a href="../about.html" class="top-link">About</a></div>
+      <div class="dropdown">
+        <a href="../portfolio.html" class="top-link" id="portfolio-link">Portfolio</a>
+        <div class="dropdown-content">
+          <a href="../rock-paper-scissors/rps.html" style="margin-top: 25px;">Rock Paper Scissors</a>
+          <a href="../etch-a-sketch/eas.html">Etch-a-Sketch</a>
+          <a href="../calculator/calculator.html">Calculator</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="frame">
+      <div class="frame-gap">
+        <h1>Etch-a-Sketch</h1>
+      </div>
+      <div id="container">
+        <!--The drawing panel is created by the script-->
+      </div>
+      <div class="controls-buttons">
+        <button onclick="newGrid()">New grid</button>
+        <div class="controls-colour">
+          <span>Colour choice</span><br />
+          <input type="radio" id="red-radio" name="colour-radios" />
+          <label for="red-radio">Black</label>
+          <input type="radio" id="random-radio" name="colour-radios" />
+          <label for="random-radio">Random</label>
+        </div>
+        <button onclick="resetColours()">Reset grid</button>
+      </div>
+
+      <div class="frame-gap"></div>
+    </div>
+  </main>
+
+
+  <script src="eas.js" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Super Mega Rock Paper Scissors</title>
+    <link href="rps.css" rel="stylesheet">
+    <link href="../stylesheets/nav.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header id="top-row">
+        <div id="top-left">
+            <a href="">
+                <img class="top-left-logo" src="../images/GitHub-Mark-Light-32px.png" id="git-logo" />
+            </a>
+        </div>
+        <nav id="top-right">
+            <div><a href="../index.html" class="top-link">Home</a></div>
+            <div><a href="../about.html" class="top-link">About</a></div>
+            <div class="dropdown">
+                <a href="../portfolio.html" class="top-link" id="portfolio-link">Portfolio</a>
+                <div class="dropdown-content">
+                    <a href="../rock-paper-scissors/rps.html" style="margin-top: 25px;">Rock Paper Scissors</a>
+                    <a href="../etch-a-sketch/eas.html">Etch-a-Sketch</a>
+                    <a href="../calculator/calculator.html">Calculator</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="grid-container">
+        <div class="header"><h1>The Super Mega Rock Paper Scissors</h1></div>
+
+        <div class="middle" id="status1">Left 1</div>
+        <div class="middle" id="status2">Right 1</div>
+
+        <div class="middle" id="p1">Player 1</div>
+        <div class="middle" id="result">Result</div>
+        <div class="middle" id="p2">Computer</div>
+
+        <img class="buttons" id="button1" src="images/paper.png" onclick="playRound(0)">
+        <img class="buttons" id="button2" src="images/scissors.png" onclick="playRound(1)">
+        <img class="buttons" id="button3" src="images/rock.png" onclick="playRound(2)">
+
+        <div class="footer">
+            <h3>There is no reset button, you are doomed to play forever!</h3>
+        </div>
+    </main>
+</body>
+<script src="rps.js"></script>
+</html>
