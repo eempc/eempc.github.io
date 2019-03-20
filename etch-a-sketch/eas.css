@@ -6,9 +6,8 @@ body {
 
 #container {
     display: grid;
-    max-width: 960px;
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid burlywood;
 }
 
 #container, .controls.buttons {
@@ -17,14 +16,13 @@ body {
 
 .grid-cell {
     background-color: rgb(130,130,130);
+    border: 1px dotted rgb(102, 102, 102);
 }
 
 .controls-buttons {
     display: flex;
     justify-content: space-around;
-    padding-top: 2em;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 40px 100px;
 }
 
 .controls-colour {
@@ -43,7 +41,7 @@ main {
     background-color: rgb(179, 5, 5);
     max-width: 1100px;
     border-radius: 10%;
-    border: 1px solid black;
+    border: 3px solid black;
     text-align: center;
     margin: auto;
 }
@@ -52,8 +50,4 @@ button {
     border-radius: 50%;
     height: 8em;
     width: 8em;
-}
-
-.frame-head {
-    height: 100px;
 }

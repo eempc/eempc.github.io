@@ -8,7 +8,7 @@ function makeSquareGrid(x) {
     container.style.gridTemplateColumns = "repeat(" + x + ", 1fr)"; // e.g. repeat(8, 1fr)
     container.style.gridTemplateRows = "repeat(" + x + ", 1fr)";
 
-    // Some nice gaps to separate the boxes (aesthetic, unnecessary)
+    // optional gaps to separate the boxes (aesthetic, unnecessary)
     container.style.gridColumnGap = "0px";
     container.style.gridRowGap = "0px";
 
@@ -19,14 +19,9 @@ function makeSquareGrid(x) {
         // Create cell
         var newDiv = document.createElement("div");
         newDiv.classList.add("grid-cell");
-        //newDiv.appendChild(document.createTextNode(i));
 
-        // Aesthetic style section, nothing important here
-        newDiv.style.height = ((containerWidth / x) * 0.6) + "px"; // Make height % of the width
-        newDiv.style.border = "1px dotted black";
-        newDiv.style.textAlign = "center";
-        newDiv.style.lineHeight = containerWidth / x + "px"; // Required for verticalAlign to work
-        newDiv.style.verticalAlign = "middle";
+        newDiv.style.height = containerWidth / x * 0.6 + "px"; // Make height % of the width
+        newDiv.style.width = (containerWidth - x * 2 - 2) / x + "px";
 
         // Add to the container
         container.appendChild(newDiv);
@@ -56,7 +51,7 @@ function addChangeColourEvent() {
     });
 }
 
-makeSquareGrid(64);
+makeSquareGrid(24);
 
 function deleteGrid() {
     while (container.lastChild) {
@@ -88,10 +83,6 @@ function randomInt(lower, upper) {
 
 function randomColour() {
     return "rgb(" + randomInt(0,100) + "%," + randomInt(0,100) + "%," + randomInt(0,100) + "%)";
-}
-
-function regexExtraction(str, start, end) {
-
 }
 
 function testFunction() {
