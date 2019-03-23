@@ -23,11 +23,11 @@ body {
     margin: auto;
 }
 
-div {
+.grid-container > * {
     align-content: center;
 }
 
-.header {
+.page-heading {
     grid-area: h;
     background-color: rgb(55, 100, 232);
 }
@@ -89,7 +89,7 @@ div {
     grid-area: f;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     .grid-container {
         grid-template-areas:
             'h h h h h h'

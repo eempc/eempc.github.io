@@ -88,7 +88,7 @@ h2 {
     height: 50px;
     border-radius: 50%;
     border: 0;
-    background-color: lightblue;
+    background-color: rgb(137, 177, 250);
     padding: 10px;
 }
 
@@ -116,11 +116,9 @@ li {
     #fourth-row {
         flex-wrap: wrap;
     }
-
-
 }
 
-@media (max-width: 512px) {
+@media (max-width: 690px) {
     #second-row {
         flex-direction: column;
     }
@@ -129,5 +127,8 @@ li {
         text-align: center;
     }
 
-
+    .skill-box {
+        width: 320px;
+        max-width: 320px;
+    }
 }

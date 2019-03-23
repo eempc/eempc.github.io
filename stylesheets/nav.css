@@ -1,3 +1,7 @@
+body {
+    margin: auto;
+}
+
 header {
     background-color: rgb(60, 84, 219);
     max-width: 1200px;
@@ -22,6 +26,7 @@ nav {
     margin-left: 20px;
     margin-right: 20px;
     border-bottom: 1px solid transparent;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-paragraph:hover {
@@ -36,12 +41,12 @@ nav {
 }
 
 .top-logo {
-
     border-radius: 50%;
     padding: 10px;
     margin: 0px 5px;
     height: 32px;
     width: 32px;
+
 }
 
 .top-logo:hover {
@@ -73,6 +78,9 @@ nav {
     display: block;
     background-color: rgba(10, 10, 189, 0.822);
     border-bottom: 1px solid transparent;
+    font-family: Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .dropdown-content a:hover {
@@ -89,8 +97,6 @@ nav {
 .dropdown:hover #portfolio-link {
     background-color: rgb(44, 137, 224);
 }
-
-/* Read this as onHover of .dropdown, do the following to #portfolio-link*/
 
 @media (max-width: 640px) {
     nav {
