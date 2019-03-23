@@ -1,93 +1,117 @@
 ﻿<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portfolio Site (Work in progress)</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="stylesheets/index.css" />
+    <link rel="stylesheet" href="stylesheets/nav.css" />
+    <link rel="stylesheet" href="stylesheets/mobile.css" />
+    <link rel="icon" href="images/waterdrop.png">
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Portfolio Site (Work in progress)</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="stylesheets/index.css" />
-  <link rel="stylesheet" href="stylesheets/nav.css" />
-</head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-icon-container">
+          <a href="index.html" class="nav-link nav-logo">
+            <img src="images/waterdrop.png" class="top-logo" id="home-logo"/>
+          </a>
+        </div>
+        <div class="nav-icon-container">
+          <a href="about.html" class="nav-link nav-logo">
+            <img src="images/waterdrop.png" class="top-logo" id="about-logo">
+          </a>
+        </div>
+        <div class="nav-icon-container">
+          <a href="portfolio.html" id="portfolio-link" class="nav-link nav-logo">
+            <img src="images/waterdrop.png" class="top-logo" id="portfolio-logo">
+          </a>
+        </div>
 
-<body>
-  <header id="top-row">
-    <div id="top-left">
-      <a href="">
-        <img class="top-left-logo" src="images/GitHub-Mark-Light-32px.png" id="git-logo" />
-      </a>
-    </div>
-    <nav id="top-right">
-      <div><a href="index.html" class="top-link">Home</a></div>
-      <div><a href="about.html" class="top-link">About</a></div>
-      <div class="dropdown">
-        <a href="portfolio.html" class="top-link" id="portfolio-link">Portfolio</a>
-        <div class="dropdown-content">
-          <a href="rock-paper-scissors/rps.html" style="margin-top: 25px;">Rock Paper Scissors</a>
-          <a href="etch-a-sketch/eas.html">Etch-a-Sketch</a>
-          <a href="calculator/calculator.html">Calculator</a>
+        <div class="nav-text-container">
+          <a href="index.html" class="nav-link nav-paragraph">Home</a>
+        </div>
+        <div class="nav-text-container">
+          <a href="about.html" class="nav-link nav-paragraph">About</a>
+        </div>
+        <div class="dropdown nav-text-container">
+          <a href="portfolio.html" id="portfolio-link" class="nav-link nav-paragraph">Portfolio</a>
+          <div class="dropdown-content">
+            <a href="rock-paper-scissors/rps.html" style="margin-top: 25px;">Rock Paper Scissors</a>
+            <a href="etch-a-sketch/eas.html">Etch-a-Sketch</a>
+            <a href="calculator/calculator.html">Calculator</a>
+          </div>
+        </div>
+
+        <div class="right-icon">
+          <a href="" class="nav-link nav-logo">
+            <img class="top-logo" src="images/GitHub-Mark-Light-32px.png" id="git-logo" />
+          </a>
+        </div>
+        <div class="">
+          <a href="" class="nav-link nav-logo">
+            <img class="top-logo" src="images/Azure.png" id="azure-logo" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="second-row">
+        <img id="profile-pic" src="images/waterdrop.png" />
+        <div class="profile-texts">
+          <h1 id="profile-name"><strong>Example Site</strong></h1>
+          <p id="profile-paragraph">
+            I like cats and I am learning front end and .NET. I like to play with my cat
+            in my spare time.
+          </p>
         </div>
       </div>
-    </nav>
-  </header>
 
-  <div id="second-row">
-    <img id="profile-pic" src="images/waterdrop.png" />
-    <div>
-      <h1 id="profile-name"><strong>Example Site</strong></h1>
-      <p id="profile-text">
-        I like cats and I am looking for a junior developer role. I'll do
-        anything, front-end, back-end, fullstack. I like to play with my cat in
-        my spare time.
-      </p>
-    </div>
-  </div>
+      <div id="third-row">
+        <h2>Skills Overview</h2>
+        <p>
+          My cat is named Ollie and he is black and white. I am good at messing
+          around with my cat. He puts up with a lot of my crap. My cat likes to
+          eat muffins so I am going to give him a surname. Ollie Muffins it is.
+        </p>
+      </div>
 
-  <div id="third-row">
-    <h2>Skills Overview</h2>
-    <p>
-      My cat is named Ollie and he is black and white. I am good at messing
-      around with my cat. He puts up with a lot of my crap. My cat likes to
-      eat muffins so I am going to give him a surname. Ollie Muffins it is.
-    </p>
-  </div>
+      <div id="fourth-row">
+        <div class="skill-box" id="box1">
+          <img src="images/file-code.png" />
+          <h3>Front end</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skill-box" id="box2">
+          <img src="images/database.png" />
+          <h3>Back end</h3>
+          <ul>
+            <li id="csharp">C# .NET</li>
+            <li id="sql">SQL</li>
+            <li>Something else</li>
+          </ul>
+        </div>
+        <div class="skill-box" id="box3">
+          <img src="images/device-computer.png" />
+          <h3>Other</h3>
+          <ul class="no-bullet">
+            <li id="blender">Blender</li>
+            <li id="photoshop">Photoshop</li>
+            <li id="android">Android Studio</li>
+            <li id="python">Python scripts</li>
+          </ul>
+        </div>
+      </div>
 
-  <div id="fourth-row">
-    <div class="skill-box" id="box1">
-      <img src="images/waterdrop.png" />
-      <h3>Front end</h3>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-    </div>
-    <div class="skill-box" id="box2">
-      <img src="images/waterdrop.png" />
-      <h3>Back end</h3>
-      <ul>
-        <li>C# .NET</li>
-        <li>SQL</li>
-        <li>Something else</li>
-      </ul>
-    </div>
-    <div class="skill-box" id="box3">
-      <img src="images/waterdrop.png" />
-      <h3>Other</h3>
-      <ul>
-        <li>Android Studio</li>
-        <li>Ruby</li>
-        <li>Python</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="fifth-row">
-
-  </div>
-
-  <script src="index.js" async defer></script>
-</body>
-
+      <div id="fifth-row"></div>
+    </main>
+    <script src="index.js" async defer></script>
+  </body>
 </html>

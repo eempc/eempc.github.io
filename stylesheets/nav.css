@@ -1,67 +1,69 @@
-#top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
     background-color: rgb(60, 84, 219);
     max-width: 1200px;
     margin: 0px auto;
 }
 
-#top-left {
+nav {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    padding-top: 3px;
+    height: 52px;
 }
 
-.top-left-logo {
+.nav-text-container {
+    width: 150px;
+}
+
+.nav-paragraph {
+    color: azure;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-paragraph:hover {
+    background-color: rgb(44, 137, 224);
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.nav-icon-container {
+    display: none;
+}
+
+.top-logo {
+
     border-radius: 50%;
     padding: 10px;
-    margin: 0px 10px;
+    margin: 0px 5px;
+    height: 32px;
+    width: 32px;
 }
 
-.top-left-logo:hover {
+.top-logo:hover {
     background-color: rgb(44, 137, 224);
     transition: 0.4s;
-
-
 }
 
-#top-right {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#top-right>* {
-    width: 160px;
-    text-align: center;
-}
-
-.top-link {
-    color: azure;
-    text-align: center;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-
-}
-
-.top-link:hover {
-    font-weight: bold;
-    border-bottom: 1px solid white;
-    transition: 0.3s;
-
-    background-color: rgb(44, 137, 224);
-    padding: 20px;
+.right-icon {
+    margin-left: auto;;
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;
+
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 160px;
+    min-width: 150px;
     z-index: 1;
+    transform: translate(1.2em,0);
 }
 
 .dropdown-content a {
@@ -84,9 +86,22 @@
     transition: 0.5s;
 }
 
-/* Read this as onHover of .dropdown, do the following to #portfolio-link*/
 .dropdown:hover #portfolio-link {
     background-color: rgb(44, 137, 224);
-    font-weight: bold;
-    transition: 0.4s;
+}
+
+/* Read this as onHover of .dropdown, do the following to #portfolio-link*/
+
+@media (max-width: 640px) {
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .nav-paragraph {
+        display: none;
+    }
+
+    .nav-icon-container {
+        display: contents;
+    }
 }

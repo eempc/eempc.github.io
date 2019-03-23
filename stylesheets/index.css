@@ -9,7 +9,9 @@ body {
     margin: auto;
 }
 
-
+main {
+    margin: auto;
+}
 
 #second-row {
     display: flex;
@@ -17,10 +19,17 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(55, 100, 232);
+
+}
+
+#second-row > * {
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 #profile-pic {
-    max-width: 200px;
+    max-width: 15%;
+    min-width: 100px;
 }
 
 #profile-name {
@@ -28,7 +37,7 @@ body {
     max-width: 600px;
 }
 
-#profile-text {
+#profile-paragraph {
     color: azure;
     max-width: 600px;
 }
@@ -60,7 +69,7 @@ h2 {
     justify-content: space-around;
     align-items: space-around;
     background-color: lightgray;
-    padding: 20px 10% 60px 10%;
+    padding: 20px 50px 60px 50px;
 }
 
 .skill-box {
@@ -70,6 +79,7 @@ h2 {
     padding: 20px;
     align-items: center;
     width: 230px;
+    max-width: 230px;
     box-shadow: 1px 1px 1px 1px #D8DDFF;
 }
 
@@ -79,8 +89,45 @@ h2 {
     border-radius: 50%;
     border: 0;
     background-color: lightblue;
+    padding: 10px;
 }
 
 ul {
     align-self: flex-start;
+    list-style-type: circle;
+}
+
+li {
+    padding-bottom: 0.25em;
+}
+
+@media (max-width:980px) {
+    .skill-box {
+        width: 200px;
+    }
+}
+
+@media (max-width:840px) {
+    .skill-box {
+        width: 230px;
+        margin-bottom: 20px;
+    }
+
+    #fourth-row {
+        flex-wrap: wrap;
+    }
+
+
+}
+
+@media (max-width: 512px) {
+    #second-row {
+        flex-direction: column;
+    }
+
+    .profile-texts > * {
+        text-align: center;
+    }
+
+
 }
