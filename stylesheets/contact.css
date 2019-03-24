@@ -1,14 +1,17 @@
-* {
-
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: darkgray;
-    max-width: 1200px;
-    margin: auto;
+h1 {
+    margin: 0px;
 }
 
 main {
     margin: auto;
+    text-align: center;
+
+}
+
+#address-section {
+    color: azure;
+}
+
+.contact-section {
+    height: 80vh;
 }

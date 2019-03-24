@@ -1,64 +1,209 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <title>Portfolio projects (WIP)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="stylesheets/index.css" rel="stylesheet" />
+  <link href="stylesheets/portfolio.css" rel="stylesheet" />
   <link href="stylesheets/nav.css" rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheets/common.css">
   <link rel="icon" href="images/waterdrop.png">
 </head>
+
 <body>
-   <header>
-     <nav>
-       <div class="nav-icon-container">
-         <a href="index.html" class="nav-link nav-logo">
-           <img src="images/home-icon.png" class="top-logo" id="home-logo" />
-         </a>
-       </div>
-       <div class="nav-icon-container">
-         <a href="contact.html" class="nav-link nav-logo">
-           <img src="images/email-2-icon.png" class="top-logo" id="about-logo">
-         </a>
-       </div>
-       <div class="nav-icon-container">
-         <a href="portfolio.html" id="portfolio-link" class="nav-link nav-logo">
-           <img src="images/case-icon.png" class="top-logo" id="portfolio-logo">
-         </a>
-       </div>
+  <header>
+    <nav>
+      <div class="nav-icon-container">
+        <a href="index.html" class="nav-link nav-logo">
+          <img src="images/home-icon.png" class="top-logo" id="home-logo" />
+        </a>
+      </div>
+      <div class="nav-icon-container">
+        <a href="contact.html" class="nav-link nav-logo">
+          <img src="images/email-2-icon.png" class="top-logo" id="about-logo">
+        </a>
+      </div>
+      <div class="nav-icon-container">
+        <a href="portfolio.html" id="portfolio-link" class="nav-link nav-logo">
+          <img src="images/case-icon.png" class="top-logo" id="portfolio-logo">
+        </a>
+      </div>
 
-       <div class="nav-text-container">
-         <a href="index.html" class="nav-link nav-paragraph">Home</a>
-       </div>
-       <div class="nav-text-container">
-         <a href="contact.html" class="nav-link nav-paragraph">Contact</a>
-       </div>
-       <div class="dropdown nav-text-container">
-         <a href="portfolio.html" id="portfolio-link" class="nav-link nav-paragraph">Portfolio</a>
-         <div class="dropdown-content">
-           <a href="rock-paper-scissors/rps.html" style="margin-top: 25px;">Rock Paper Scissors</a>
-           <a href="etch-a-sketch/eas.html">Etch-a-Sketch</a>
-           <a href="calculator/calculator.html">Calculator</a>
-         </div>
-       </div>
+      <div class="nav-text-container">
+        <a href="index.html" class="nav-link nav-paragraph">Home</a>
+      </div>
+      <div class="nav-text-container">
+        <a href="contact.html" class="nav-link nav-paragraph">Contact</a>
+      </div>
+      <div class="dropdown nav-text-container">
+        <a href="portfolio.html" id="portfolio-link" class="nav-link nav-paragraph">Portfolio</a>
+        <div class="dropdown-content">
+          <a href="rock-paper-scissors/rps.html" style="margin-top: 25px;">Rock Paper Scissors</a>
+          <a href="etch-a-sketch/eas.html">Etch-a-Sketch</a>
+          <a href="calculator/calculator.html">Calculator</a>
+        </div>
+      </div>
 
-       <div class="right-icon">
-         <a href="https://github.com/eempc" class="nav-link nav-logo">
-           <img class="top-logo" src="images/GitHub-Mark-Light-32px.png" id="git-logo" />
-         </a>
-       </div>
-       <div class="">
-         <a href="" class="nav-link nav-logo">
-           <img class="top-logo" src="images/azure.png" id="azure-logo" />
-         </a>
-       </div>
-     </nav>
-   </header>
-   <main>
-                <a href="rock-paper-scissors/rps.html" style="margin-top: 25px;">Rock Paper Scissors</a>
-                <a href="etch-a-sketch/eas.html">Etch-a-Sketch</a>
-                <a href="calculator/calculator.html">Calculator</a>
-   </main>
+      <div class="right-icon">
+        <a href="https://github.com/eempc" class="nav-link nav-logo">
+          <img class="top-logo" src="images/GitHub-Mark-Light-32px.png" id="git-logo" />
+        </a>
+      </div>
+      <div class="hidden">
+        <a href="" class="nav-link nav-logo">
+          <img class="top-logo" src="images/azure.png" id="azure-logo" />
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="row-2" class="padding-30-0 primary-gradient-blue">
+      <h1 class="main-heading">Portfolio Projects</h1>
+      <p>Summary in here.</p>
+    </div>
+    <div id="odin-section" class="project-section secondary-gradient-grey padding-30-0">
+      <h2>Front end projects from The Odin Project course</h2>
+      <div class="project-boxes">
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Calculator</h3>
+          <ul>
+            <li>Plain HTML</li>
+            <li>Mobile friendly</li>
+            <li>Client side javaScript calculator</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Etch</h3>
+          <ul>
+            <li>Plain HTML</li>
+            <li>Plain CSS</li>
+            <li>JavaScript grid instantiation</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>RPS</h3>
+          <ul>
+            <li>Plain HTML</li>
+            <li>Plain CSS</li>
+            <li>Plain JS</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>(Pending) Ruby on Rails</h3>
+          <ul>
+            <li>Plain HTML</li>
+            <li>Plain CSS</li>
+            <li>Plain JS</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Exercises</h3>
+          <ul>
+            <li>Using Jasmine TDD</li>
+            <li>Ruby basics</li>
+            <li>Using Rake TDD</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div id="csharp-section" class="project-section secondary-gradient-grey padding-30-0">
+      <h2>C# .NET Projects from whatever tutorials and guides I could find</h2>
+      <div class="project-boxes">
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Single SQL Database</h3>
+          <ul>
+            <li>Visual C# WinForms</li>
+            <li>Access single table SQL database</li>
+            <li>Web scrape (Selenium must be completed again)</li>
+            <li>JSON deserialisation</li>
+            <li>Validations</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>(Pending) WPF:</h3>
+          <ul>
+            <li>Dual table SQL database</li>
+            <li>All that good stuff like INNER JOIN oh yeah</li>
+            <li>Method inheritance override</li>
+            <li>func delegates</li>
+            <li>Unit testing (crikey)</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>MVC ASP.NET</h3>
+          <ul>
+            <li>Access single table SQL database</li>
+            <li>Razor pages</li>
+            <li>Database migration</li>
+            <li>Modification of existing bootstrap template</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Desktop file system</h3>
+          <ul>
+            <li>Recursive folder search (Python)</li>
+            <li>Visual C# Winforms</li>
+            <li>Read/Write MP3 ID3</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Something else here?</h3>
+          <ul>
+            <li>Maybe Azure but it's 12 months</li>
+            <li>b</li>
+            <li>c</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="current-site-section" class="project-section secondary-gradient-grey padding-30-0">
+      <h2>Other</h2>
+      <div class="project-boxes">
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>This website</h3>
+          <ul>
+            <li>Lots of flex box </li>
+            <li>Responsive pages</li>
+            <li>Need some examples of grid</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Python Scripts</h3>
+          <ul>
+            <li>File system search</li>
+            <li>Simulate mouse and keyboard (pending)</li>
+            <li>More web scraping (pending)</li>
+          </ul>
+        </div>
+                <div class="project-box tertiary-gradient-light">
+                  <img src="images/waterdrop.png">
+                  <h3>Blender</h3>
+                  <ul>
+                    <li>The doughnut tax</li>
+                    <li>The teddy bear tax</li>
+                    <li>Kitchen</li>
+                    <li>Chain tax</li>
+                    <li>Tea cup tax</li>
+                  </ul>
+                </div>
+      </div>
+    </div>
+  </main>
 
 </body>
+
 </html>

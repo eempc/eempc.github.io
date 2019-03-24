@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="stylesheets/index.css" />
     <link rel="stylesheet" href="stylesheets/nav.css" />
-    <link rel="stylesheet" href="stylesheets/mobile.css" />
     <link rel="stylesheet" href="stylesheets/common.css" />
     <link rel="icon" href="images/waterdrop.png">
   </head>
@@ -60,10 +59,10 @@
       </nav>
     </header>
     <main>
-      <div id="second-row" class="primary-gradient-blue">
+      <div id="second-row" class="primary-gradient-blue padding-30-0">
         <img id="profile-pic" src="images/waterdrop.png" />
         <div class="profile-texts">
-          <h1 id="profile-name"><strong>Evelyn's Example Site</strong></h1>
+          <h1 id="profile-name" class="main-heading">Evelyn's Example Site</h1>
           <p id="profile-paragraph">
             I like cats and I am learning front end and .NET.
             I did The Odin Project up to the end of their web development part.
@@ -74,51 +73,52 @@
         </div>
       </div>
 
-      <div id="third-row" class="secondary-gradient-grey">
+      <div id="third-row" class="secondary-gradient-grey padding-30-0">
         <h2>Skills Overview</h2>
-        <p>
+        <p class="skill-paragraph">
           My cat is named Ollie and he is black and white. I am good at messing
           around with my cat. He puts up with a lot of my crap. My cat likes to
           eat muffins so I am going to give him a surname. Ollie Muffins it is.
         </p>
+              <div id="skill-box-row" class="">
+                <div class="skill-box tertiary-gradient-light" id="box1">
+                  <img src="images/file-code.png" />
+                  <h3>Web Development</h3>
+                  <ul>
+                    <li>HTML (competent)</li>
+                    <li>CSS (started)</li>
+                    <li>JavaScript (competent)</li>
+                    <li>One JS framework (none)</li>
+                  </ul>
+                </div>
+                <div class="skill-box tertiary-gradient-light" id="box2">
+                  <img src="images/database.png" />
+                  <h3>Languages and Frameworks</h3>
+                  <ul>
+                    <li>C# WinForms (competent)</li>
+                    <li>C# WPF (none)</li>
+                    <li>C# SQL (started)</li>
+                    <li>C# WebForms MVC Razor (started)</li>
+                    <li>Rails/Django (none)</li>
+                  </ul>
+                </div>
+                <div class="skill-box tertiary-gradient-light" id="box3">
+                  <img src="images/device-computer.png" />
+                  <h3>Other</h3>
+                  <ul class="no-bullet">
+                    <li id="blender">Blender (started)</li>
+                    <li id="photoshop">Photoshop Elements (competent)</li>
+                    <li id="android">Android Studio (started)</li>
+                    <li id="python">Python scripts (started)</li>
+                  </ul>
+                </div>
+              </div>
       </div>
 
-      <div id="fourth-row" class="secondary-gradient-grey">
-        <div class="skill-box tertiary-gradient-light" id="box1">
-          <img src="images/file-code.png" />
-          <h3>Web Development</h3>
-          <ul>
-            <li>HTML (competent)</li>
-            <li>CSS (started)</li>
-            <li>JavaScript (competent)</li>
-            <li>One JS framework (none)</li>
-          </ul>
-        </div>
-        <div class="skill-box tertiary-gradient-light" id="box2">
-          <img src="images/database.png" />
-          <h3>Languages and Frameworks</h3>
-          <ul>
-            <li>C# WinForms (competent)</li>
-            <li>C# WPF (none)</li>
-            <li>C# SQL (started)</li>
-            <li>C# WebForms MVC Razor (started)</li>
-            <li>Rails/Django (none)</li>
-          </ul>
-        </div>
-        <div class="skill-box tertiary-gradient-light" id="box3">
-          <img src="images/device-computer.png" />
-          <h3>Other</h3>
-          <ul class="no-bullet">
-            <li id="blender">Blender (started)</li>
-            <li id="photoshop">Photoshop Elements (competent)</li>
-            <li id="android">Android Studio (started)</li>
-            <li id="python">Python scripts (started)</li>
-          </ul>
-        </div>
-      </div>
+
 
       <div id="fifth-row"></div>
     </main>
-    <script src="index.js" async defer></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

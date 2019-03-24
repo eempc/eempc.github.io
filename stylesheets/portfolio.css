@@ -1,41 +1,20 @@
-
-#second-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+h1 {
+    text-align: center;
+    margin: 0px;
+    max-width: 800px;
 }
 
-#second-row > * {
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-#profile-pic {
-    max-width: 15%;
-    min-width: 100px;
-}
-
-#profile-name {
-    max-width: 600px;
-}
-
-#profile-paragraph {
+p {
+    text-align: center;
     color: azure;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 h2 {
     text-align: center;
-    padding: 20px;
     max-width: 800px;
     margin: auto;
-}
-
-.skill-paragraph {
-    max-width: 800px;
-    margin: auto 20px;
+    padding: 20px 20px 40px 20px;
 }
 
 h3 {
@@ -43,18 +22,33 @@ h3 {
     margin-block-end: 0%;
 }
 
-
-#skill-box-row {
+#row-2 {
     display: flex;
-    justify-content: space-around;
-    align-items: space-around;
-    padding: 20px 50px 60px 50px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.skill-box {
+#odin-section {
+
+}
+
+.project-section {
+
+}
+
+.project-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    padding: 20px 50px 30px 50px;
+}
+
+.project-box {
     display: flex;
     flex-direction: column;
-
+    margin: 0px 10px 40px 10px;
     padding: 20px;
     align-items: center;
     width: 230px;
@@ -62,7 +56,7 @@ h3 {
     box-shadow: 1px 1px 1px 1px #D8DDFF;
 }
 
-.skill-box img {
+.project-box img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -81,32 +75,24 @@ li {
 }
 
 @media (max-width:980px) {
-    .skill-box {
+    .project-box {
         width: 200px;
     }
 }
 
 @media (max-width:840px) {
-    .skill-box {
+    .project-box {
         width: 230px;
         margin-bottom: 20px;
     }
 
-    #fourth-row {
+    .project-boxes {
         flex-wrap: wrap;
     }
 }
 
 @media (max-width: 690px) {
-    #second-row {
-        flex-direction: column;
-    }
-
-    .profile-texts > * {
-        text-align: center;
-    }
-
-    .skill-box {
+    .project-box {
         width: 320px;
         max-width: 320px;
     }

@@ -1,11 +1,35 @@
+body {
+    background-color: darkgray;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .primary-gradient-blue {
-        background: linear-gradient(to right, rgb(45, 90, 223) 0%, rgb(36, 127, 212) 100%);
+        background: linear-gradient(to right, rgb(199, 204, 255) 0%, #436eee 33%, #436eee 66%, rgb(199, 204, 255) 100%);
 }
 
 .secondary-gradient-grey {
-    background: linear-gradient(to right, rgb(100,100,100) 0%, rgb(160,160,160) 100%)
+    background: linear-gradient(to bottom, rgb(124, 124, 124) 0%, rgb(160,160,160) 100%)
 }
 
 .tertiary-gradient-light {
     background: linear-gradient(to right, rgb(162, 158, 197) 0%, rgb(206, 206, 206) 33%, rgb(206, 206, 206) 66%, rgb(162, 158, 197) 100%);
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    margin: 0px;
+}
+
+.padding-30-0 {
+        padding: 30px 0px;
+}
+
+.main-heading {
+    font-size: 3em;
+    color: azure;
 }
