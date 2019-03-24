@@ -92,7 +92,7 @@ li {
         margin-bottom: 20px;
     }
 
-    #fourth-row {
+    #skill-box-row {
         flex-wrap: wrap;
     }
 }
@@ -110,4 +110,6 @@ li {
         width: 320px;
         max-width: 320px;
     }
+
+
 }
