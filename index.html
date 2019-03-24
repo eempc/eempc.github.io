@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="stylesheets/index.css" />
     <link rel="stylesheet" href="stylesheets/nav.css" />
     <link rel="stylesheet" href="stylesheets/mobile.css" />
+    <link rel="stylesheet" href="stylesheets/common.css" />
     <link rel="icon" href="images/waterdrop.png">
   </head>
 
@@ -51,7 +52,7 @@
             <img class="top-logo" src="images/GitHub-Mark-Light-32px.png" id="git-logo" />
           </a>
         </div>
-        <div class="">
+        <div class="" style="display: none;">
           <a href="" class="nav-link nav-logo">
             <img class="top-logo" src="images/azure.png" id="azure-logo" />
           </a>
@@ -59,18 +60,21 @@
       </nav>
     </header>
     <main>
-      <div id="second-row">
+      <div id="second-row" class="primary-gradient-blue">
         <img id="profile-pic" src="images/waterdrop.png" />
         <div class="profile-texts">
           <h1 id="profile-name"><strong>Evelyn's Example Site</strong></h1>
           <p id="profile-paragraph">
-            I like cats and I am learning front end and .NET. I like to play with my cat
-            in my spare time.
+            I like cats and I am learning front end and .NET.
+            I did The Odin Project up to the end of their web development part.
+            Then they wanted to move on to Ruby on Rails.
+            Ruby isn't appealing to me and I wish they had chosen Python Django instead.
+            I like to play with my cat in my spare time.
           </p>
         </div>
       </div>
 
-      <div id="third-row">
+      <div id="third-row" class="secondary-gradient-grey">
         <h2>Skills Overview</h2>
         <p>
           My cat is named Ollie and he is black and white. I am good at messing
@@ -79,33 +83,36 @@
         </p>
       </div>
 
-      <div id="fourth-row">
-        <div class="skill-box" id="box1">
+      <div id="fourth-row" class="secondary-gradient-grey">
+        <div class="skill-box tertiary-gradient-light" id="box1">
           <img src="images/file-code.png" />
-          <h3>Front end</h3>
+          <h3>Web Development</h3>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
+            <li>HTML (competent)</li>
+            <li>CSS (started)</li>
+            <li>JavaScript (competent)</li>
+            <li>One JS framework (none)</li>
           </ul>
         </div>
-        <div class="skill-box" id="box2">
+        <div class="skill-box tertiary-gradient-light" id="box2">
           <img src="images/database.png" />
-          <h3>Back end and desktop</h3>
+          <h3>Languages and Frameworks</h3>
           <ul>
-            <li>C# .NET</li>
-            <li>SQL?</li>
-            <li>Something else</li>
+            <li>C# WinForms (competent)</li>
+            <li>C# WPF (none)</li>
+            <li>C# SQL (started)</li>
+            <li>C# WebForms MVC Razor (started)</li>
+            <li>Rails/Django (none)</li>
           </ul>
         </div>
-        <div class="skill-box" id="box3">
+        <div class="skill-box tertiary-gradient-light" id="box3">
           <img src="images/device-computer.png" />
           <h3>Other</h3>
           <ul class="no-bullet">
-            <li id="blender">Blender</li>
-            <li id="photoshop">Photoshop Elements</li>
-            <li id="android">Android Studio</li>
-            <li id="python">Python scripts</li>
+            <li id="blender">Blender (started)</li>
+            <li id="photoshop">Photoshop Elements (competent)</li>
+            <li id="android">Android Studio (started)</li>
+            <li id="python">Python scripts (started)</li>
           </ul>
         </div>
       </div>

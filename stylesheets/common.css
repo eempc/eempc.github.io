@@ -1,0 +1,11 @@
+.primary-gradient-blue {
+        background: linear-gradient(to right, rgb(45, 90, 223) 0%, rgb(36, 127, 212) 100%);
+}
+
+.secondary-gradient-grey {
+    background: linear-gradient(to right, rgb(100,100,100) 0%, rgb(160,160,160) 100%)
+}
+
+.tertiary-gradient-light {
+    background: linear-gradient(to right, rgb(162, 158, 197) 0%, rgb(206, 206, 206) 33%, rgb(206, 206, 206) 66%, rgb(162, 158, 197) 100%);
+}
