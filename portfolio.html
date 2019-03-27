@@ -8,6 +8,7 @@
   <link href="stylesheets/portfolio.css" rel="stylesheet" />
   <link href="stylesheets/nav.css" rel="stylesheet" />
   <link rel="stylesheet" href="stylesheets/common.css">
+  <link rel="stylesheet" href="stylesheets/slideshow.css">
   <link rel="icon" href="images/waterdrop.png">
 </head>
 
@@ -113,6 +114,7 @@
 
       </div>
     </div>
+    <!-- C# section -->
     <div id="csharp-section" class="project-section secondary-gradient-grey padding-30-0">
       <h2>C# .NET Projects from whatever tutorials and guides I could find</h2>
       <div class="project-boxes">
@@ -200,10 +202,58 @@
                     <li>Tea cup tax</li>
                   </ul>
                 </div>
+                                <div class="project-box tertiary-gradient-light">
+                                  <img src="images/waterdrop.png">
+                                  <h3>Contributed shovelware to the Android store</h3>
+                                  <ul>
+                                    <li>A quiz app</li>
+                                    <li>Another quiz app</li>
+                                    <li>Score keeper app</li>
+                                    <li>Zoidberg woop woop app</li>
+                                    <li>Assorted other crapp</li>
+                                  </ul>
+                                </div>
+      </div>
+    </div>
+
+<!-- Carousel -->
+    <div id="slideshow">
+        <div class="slideshow-container">
+
+          <!-- Images of stuff -->
+          <div class="mySlides fade slide-img">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/red.png">
+            <div class="caption-text">Caption One</div>
+          </div>
+
+          <div class="mySlides fade slide-img">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/green.png">
+            <div class="caption-text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade slide-img">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/blue.png">
+            <div class="caption-text">Caption Three</div>
+          </div>
+
+          <!-- Buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- Dots and circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
     </div>
   </main>
-
+  <script src="slideshow.js"></script>
 </body>
 
 </html>
