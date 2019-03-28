@@ -59,10 +59,88 @@
     </nav>
   </header>
   <main>
+
     <div id="row-2" class="padding-30-0 primary-gradient-blue">
       <h1 class="main-heading">Portfolio Projects</h1>
       <p>Summary in here.</p>
     </div>
+
+    <!-- Carousel -->
+    <div id="slideshow" class="secondary-gradient-grey">
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/blue.png" style="width:100%" alt="Blue">
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/calculator.png" style="width:100%">
+          <div class="text">Calculator</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/red.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+
+      <!-- Long text -->
+      <div class="text-slideshow-container">
+        <div class="slideshow-text">
+          <h3 id="slideshow-text-h3">Car Database</h3>
+          <p id="slideshow-text-p">
+The purpose of this project was to scrape data from car listing sites, store the data in a database and display details such as year, make, model, etc. in a table.
+The SQL database was created and migrated by the Visual Studio template for .NET Core 2.2 web apps. Simultaneously a desktop app was created using WinForms to access the database from Windows.
+The web and desktop versions accept single CRUD queries. The desktop version was supposed to include Selenium but many sites have blacklisted bot scrapers. In lieu of that, the desktop version extracts the car information JSON from manually downloaded HTML pages.
+
+          </p>
+          <div class="tags">
+            <p>C#</p>
+            <p>WinForms</p>
+            <p>ASP</p>
+            <p>SQL</p>
+          </div>
+        </div>
+
+        <div class="slideshow-text">
+          <h3 id="slideshow-text-h3">Calculator</h3>
+          <p id="slideshow-text-p">
+            This calculator an early portfolio project as part The Odin Project’s front end course. It was intended it to mimic a physical calculator. It does basic calculations: add, subtract, multiply and divide, and deals with negative numbers. It accepts keyboard inputs on desktop and scales down to mobile resolutions.
+          </p>
+          <div class="tags">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+          </div>
+        </div>
+
+        <div class="slideshow-text">
+          <h3 id="slideshow-text-h3">C# Project Three</h3>
+          <p id="slideshow-text-p">
+            CMeow Meow at cat cat
+          </p>
+        </div>
+      </div>
+    </div>
+
+
     <div id="odin-section" class="project-section secondary-gradient-grey padding-30-0">
       <h2>Front end projects from The Odin Project course</h2>
       <div class="project-boxes">
@@ -191,69 +269,34 @@
             <li>More web scraping (pending)</li>
           </ul>
         </div>
-                <div class="project-box tertiary-gradient-light">
-                  <img src="images/waterdrop.png">
-                  <h3>Blender</h3>
-                  <ul>
-                    <li>The doughnut tax</li>
-                    <li>The teddy bear tax</li>
-                    <li>Kitchen</li>
-                    <li>Chain tax</li>
-                    <li>Tea cup tax</li>
-                  </ul>
-                </div>
-                                <div class="project-box tertiary-gradient-light">
-                                  <img src="images/waterdrop.png">
-                                  <h3>Contributed shovelware to the Android store</h3>
-                                  <ul>
-                                    <li>A quiz app</li>
-                                    <li>Another quiz app</li>
-                                    <li>Score keeper app</li>
-                                    <li>Zoidberg woop woop app</li>
-                                    <li>Assorted other crapp</li>
-                                  </ul>
-                                </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Blender</h3>
+          <ul>
+            <li>The doughnut tax</li>
+            <li>The teddy bear tax</li>
+            <li>Kitchen</li>
+            <li>Chain tax</li>
+            <li>Tea cup tax</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Contributed shovelware to the Android store</h3>
+          <ul>
+            <li>A quiz app</li>
+            <li>Another quiz app</li>
+            <li>Score keeper app</li>
+            <li>Zoidberg woop woop app</li>
+            <li>Assorted other crapp</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-<!-- Carousel -->
-    <div id="slideshow">
-        <div class="slideshow-container">
 
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="images/blue.png" style="width:100%">
-            <div class="text">Caption Text</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="images/green.png" style="width:100%">
-            <div class="text">Caption Two</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="images/red.png" style="width:100%">
-            <div class="text">Caption Three</div>
-          </div>
-
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </div>
   </main>
-<script src="scripts/slideshow.js"></script>
+  <script src="scripts/slideshow.js"></script>
 </body>
 
 </html>

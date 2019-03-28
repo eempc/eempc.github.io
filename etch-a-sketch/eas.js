@@ -31,7 +31,7 @@ function makeSquareGrid(x) {
 
 function addChangeColourEvent() {
     var cells = document.querySelectorAll(".grid-cell");
-    cells.forEach((cell) => {
+    cells.forEach(cell => {
         cell.addEventListener('mouseover', function(e) {
             // Check which radio button is checked to determine which colour
             if (document.getElementById("random-radio").checked)

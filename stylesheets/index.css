@@ -24,6 +24,10 @@
     max-width: 600px;
 }
 
+#third-row {
+
+}
+
 h2 {
     text-align: center;
     padding: 20px;
@@ -33,7 +37,8 @@ h2 {
 
 .skill-paragraph {
     max-width: 800px;
-    margin: auto 20px;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 h3 {
