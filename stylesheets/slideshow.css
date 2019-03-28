@@ -17,6 +17,7 @@
     max-width: 1000px;
     position: relative;
     margin: auto;
+    padding: 0px 0px;
 }
 
 /* Hide the images by default */
@@ -106,6 +107,7 @@
 
 .slideshow-text p {
     text-align: left;
+    padding: 0px 15px;
 }
 
 .tags {
@@ -123,6 +125,21 @@
     width: 100px;
     text-align: center;
     color: black;
+}
+
+.link-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+}
+
+.link-row > * {
+        width: 100px;
+        text-align: center;
+        padding: 10px 10px;
+        background-color: gray;
+        text-decoration: none;
+        margin: 5px 10px;
 }
 
 /* Fading animation */
