@@ -71,20 +71,10 @@ li {
     padding-bottom: 0.25em;
 }
 
-@media (max-width:980px) {
-    .project-box {
-        width: 230px;
-    }
-}
 
 @media (max-width:840px) {
     .project-box {
-        width: 230px;
         margin-bottom: 20px;
-    }
-
-    .project-boxes {
-        flex-wrap: wrap;
     }
 }
 
