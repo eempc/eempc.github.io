@@ -51,13 +51,14 @@ h3 {
     display: flex;
     justify-content: space-around;
     align-items: space-around;
+    flex-wrap: wrap;
     padding: 20px 50px 60px 50px;
 }
 
 .skill-box {
     display: flex;
     flex-direction: column;
-
+margin-bottom: 20px;
     padding: 20px;
     align-items: center;
     width: 230px;
@@ -83,15 +84,10 @@ li {
     padding-bottom: 0.25em;
 }
 
-@media (max-width:980px) {
-    .skill-box {
-        width: 200px;
-    }
-}
 
-@media (max-width:840px) {
+
+@media (max-width:900px) {
     .skill-box {
-        width: 230px;
         margin-bottom: 20px;
     }
 

@@ -33,3 +33,24 @@ main {
     font-size: 3em;
     color: azure;
 }
+
+
+
+@media (max-width: 690px) {
+    .main-heading {
+        font-size: 2.4em;
+    }
+
+    .secondary-heading {
+        font-size: 1.2em;
+        padding: 10px 15px;
+    }
+
+    .tertiary-heading {
+        font-size: 1.1em;
+    }
+
+    .primary-gradient-blue {
+        background: linear-gradient(to right, rgb(99, 110, 233) 0%, #436eee 33%, #436eee 66%, rgb(96, 106, 211) 100%);
+    }
+}

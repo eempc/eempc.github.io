@@ -10,7 +10,7 @@
 }
 
 #slideshow {
-    padding: 60px 0px;
+    padding: 60px 10px 0px 10px;
 }
 
 /* Slideshow container */
@@ -175,5 +175,13 @@
 
     to {
         opacity: 1
+    }
+}
+
+@media (max-width: 690px) {
+
+
+    #slideshow {
+        padding: 10px;
     }
 }
