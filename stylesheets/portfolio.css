@@ -29,14 +29,6 @@ h3 {
     align-items: center;
 }
 
-#odin-section {
-
-}
-
-.project-section {
-
-}
-
 .project-boxes {
     display: flex;
     flex-wrap: wrap;
