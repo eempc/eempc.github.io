@@ -97,6 +97,7 @@
 
 .text-slideshow-container {
     margin: auto;
+    padding-bottom: 50px;
 }
 
 .slideshow-text {
