@@ -40,8 +40,8 @@
       <div class="dropdown nav-text-container">
         <a href="portfolio.html" id="portfolio-link" class="nav-link nav-paragraph">Portfolio</a>
         <div class="dropdown-content">
-          <a href="rock-paper-scissors/rps.html" style="margin-top: 25px;">Rock Paper Scissors</a>
-          <a href="etch-a-sketch/eas.html">Etch-a-Sketch</a>
+
+          <a href="etch-a-sketch/eas.html" style="margin-top: 25px;">Etch-a-Sketch</a>
           <a href="calculator/calculator.html">Calculator</a>
         </div>
       </div>
@@ -63,7 +63,7 @@
     <!-- Title section -->
     <div id="row-2" class="padding-30-0 primary-gradient-blue">
       <h1 class="main-heading">Portfolio Projects</h1>
-      <p>Summary in here.</p>
+      <p>Enter summary here</p>
     </div>
 
     <!-- Slideshow -->
@@ -72,21 +72,27 @@
 
         <!-- Full-width images with number and caption text Make sure to remove height constraint in CSS -->
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
+          <div class="numbertext">1 / 4</div>
           <img src="images/cardata.gif" class="slide-img" alt="">
           <div class="text">Caption Text</div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
+          <div class="numbertext">2 / 4</div>
           <img src="images/calculator.png" class="slide-img">
           <div class="text">Calculator</div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
+          <div class="numbertext">3 / 4</div>
           <img src="images/red.png" class="slide-img">
           <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+            <img src="images/blue.png" class="slide-img">
+          <div class="text">Caption Four</div>
         </div>
 
         <!-- Next and previous buttons -->
@@ -100,14 +106,19 @@
         <span class="dot" onclick="currentSlide(0)"></span>
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
 
       <!-- Long text -->
       <div class="text-slideshow-container">
+        <!-- 1 -->
         <div class="slideshow-text">
           <h3 id="slideshow-text-h3">Car Database</h3>
           <p id="slideshow-text-p">
-The purpose of this project was to scrape data from car listing sites, store the data in an SQL database and display details in a table or listview. The database is accessed by an MVC ASP.NET web app and also by a desktop WinForms app. The desktop app has a basic web scraper to extract JSON data.
+            The purpose of this project was to scrape data from car listing sites,
+            store the data in an SQL database and display details in a table or listview.
+            The database is accessed by an MVC ASP.NET web app and also by a desktop WinForms app.
+            The desktop app has a basic web scraper to extract JSON data.
           </p>
           <div class="tags">
             <p>C#</p>
@@ -115,16 +126,19 @@ The purpose of this project was to scrape data from car listing sites, store the
             <p>ASP.NET</p>
             <p>SQL</p>
           </div>
-                    <div class="link-row">
-                      <a href="https://github.com/eempc/CarCompare/tree/master/CarCompare">Code (MVC)</a>
-                      <a href="https://github.com/eempc/CarCompare2">Code (Desk)</a>
-                    </div>
+          <div class="link-row">
+            <a href="https://github.com/eempc/CarCompare/tree/master/CarCompare">Code (Web)</a>
+            <a href="https://github.com/eempc/CarCompare2">Code (Desk)</a>
+          </div>
         </div>
 
+        <!-- 2 -->
         <div class="slideshow-text">
           <h3 id="slideshow-text-h3">Calculator</h3>
           <p id="slideshow-text-p">
-            This calculator is an early portfolio project as part The Odin Project’s front end course. It was intended it to mimic a physical calculator. It does basic calculations: add, subtract, multiply and divide, and deals with negative numbers. It accepts keyboard inputs on desktop and scales down to mobile resolutions.
+            This calculator is an early  project as part The Odin Project’s front end course.
+            It does basic calculations: add, subtract, multiply and divide, and deals with negative numbers.
+            It accepts keyboard inputs (Chrome only) on desktop and scales down to mobile resolutions.
           </p>
           <div class="tags">
             <p>HTML</p>
@@ -137,66 +151,171 @@ The purpose of this project was to scrape data from car listing sites, store the
           </div>
         </div>
 
+        <!-- 3 -->
         <div class="slideshow-text">
-          <h3 id="slideshow-text-h3">Battleships!</h3>
+          <h3 id="slideshow-text-h3">Portfolio website</h3>
           <p id="slideshow-text-p">
-            I have not made this one yet but it looks interesting.
+            This web page was made to show usage of responsive elements, slideshows,
+            flex boxes and aesthetic effects.
+            It will be continually improved and will include one framework in future.
           </p>
-                    <div class="tags">
-                      <p>C#</p>
-                      <p>WPF</p>
-
-                    </div>
-                    <div class="link-row">
-                      <a href="">Code</a>
-                    </div>
+          <div class="tags">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+          </div>
+          <div class="link-row">
+            <a href="https://github.com/eempc/eempc.github.io">Code</a>
+          </div>
         </div>
+<!-- 4 -->
+        <div class="slideshow-text">
+          <h3 id="slideshow-text-h3">Project 4 WPF</h3>
+          <p id="slideshow-text-p">
+            Pending summary:
+          </p>
+          <div class="tags">
+            <p>C#</p>
+            <p>WPF</p>
+            <p>XAML</p>
+          </div>
+          <div class="link-row">
+            <a href="">Code</a>
+          </div>
+        </div>
+
       </div>
     </div>
 
-
+<!-- C# Skill section -->
     <div class="project-section secondary-gradient-grey padding-30-0">
-      <h2>Summary of C# Skills and Knowledge</h2>
-      <p></p>
+      <h2>Summary of .NET C# Skills and Knowledge</h2>
       <div class="project-boxes">
         <div class="project-box tertiary-gradient-light">
           <img src="images/waterdrop.png">
-          <h3>Unconscious competence</h3>
+          <h3>Comfortable with</h3>
           <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <li>Primitive data types</li>
+            <li>Windows Forms controls</li>
+            <li></li>
           </ul>
         </div>
         <div class="project-box tertiary-gradient-light">
           <img src="images/waterdrop.png">
-          <h3>Box</h3>
+          <h3>Can solve problems with</h3>
           <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <li>Objects, classes and inheritance</li>
+            <li>LINQ and SQL queries</li>
+            <li>Regular expressions</li>
           </ul>
         </div>
         <div class="project-box tertiary-gradient-light">
           <img src="images/waterdrop.png">
-          <h3>Box</h3>
+          <h3>Improving on</h3>
           <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <li>ASP.NET Razor pages</li>
+            <li>Delegate usage</li>
+            <li>Asynchronous methods</li>
+            <li>WPF XAML</li>
           </ul>
         </div>
         <div class="project-box tertiary-gradient-light">
           <img src="images/waterdrop.png">
-          <h3>(Pending) Ruby on Rails</h3>
+          <h3>Pending learning</h3>
           <ul>
-            <li>Plain HTML</li>
-            <li>Plain CSS</li>
-            <li>Plain JS</li>
+            <li>Events and exceptions</li>
+            <li>Azure deployment</li>
+            <li>Security</li>
           </ul>
         </div>
       </div>
     </div>
+
+    <!-- general computing knowledge -->
+    <div class="project-section secondary-gradient-grey padding-30-0">
+      <h2>Summary of Computing Knowledge</h2>
+      <div class="project-boxes">
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Comfortable with</h3>
+          <ul>
+            <li>Arrays</li>
+            <li>Dictionaries/hashes</li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Can solve problems with</h3>
+          <ul>
+            <li>Recursion</li>
+            <li>Stacks and queues</li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Improving on</h3>
+          <ul>
+            <li>Linked lists</li>
+            <li>Tree data structures</li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Pending learning</h3>
+          <ul>
+            <li>SDLC</li>
+            <li>SOLID principles</li>
+            <li>TDD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<!-- Front end skills-->
+    <div class="project-section secondary-gradient-grey padding-30-0">
+      <h2>Summary of Front End</h2>
+      <div class="project-boxes">
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Comfortable with</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Chrome Dev Tools</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Can solve problems with</h3>
+          <ul>
+            <li>Responsive webpages</li>
+            <li>Grid and flexbox</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Improving on</h3>
+          <ul>
+            <li>One JS framework</li>
+            <li>Tables</li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="project-box tertiary-gradient-light">
+          <img src="images/waterdrop.png">
+          <h3>Pending learning</h3>
+          <ul>
+            <li>Multi-browser support</li>
+            <li></li>
+            <li>Jasmine TDD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </main>
   <script src="scripts/slideshow.js"></script>
 </body>

@@ -47,7 +47,7 @@ document.onkeypress = function (e) {
 document.addEventListener("keydown", keyCheck);
 
 function keyCheck(e) {
-  //console.log(e.key); 
+  //console.log(e.key);
   if (e.key == "Backspace") backspace();
   if (e.key == "Delete") clearAll();
 }
@@ -123,7 +123,7 @@ function screenAppendDecimal() {
 
 function toggleNegative() {
   var str = screen1.textContent;
-  wasTheLastButtonPressedEquals = false;
+  //wasTheLastButtonPressedEquals = false;
   if (!str.includes("-")) screen1.textContent = "-" + str;
   else screen1.textContent = screen1.textContent.substring(1);
 }
@@ -147,7 +147,7 @@ function clearAll() {
 
 function random() {
   if (wasTheLastButtonPressedEquals) {
-    clearAll();    
+    clearAll();
   }
   screen1.textContent = Math.random().toFixed(2);
   wasTheLastButtonPressedEquals = false;

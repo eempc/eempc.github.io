@@ -51,7 +51,7 @@ function addChangeColourEvent() {
     });
 }
 
-makeSquareGrid(24);
+
 
 function deleteGrid() {
     while (container.lastChild) {
@@ -90,3 +90,6 @@ function testFunction() {
     var randomButton = document.getElementById("random-radio").checked;
     console.log(redButton + " " + randomButton);
 }
+
+
+makeSquareGrid(12);
