@@ -84,6 +84,11 @@ li {
     padding-bottom: 0.25em;
 }
 
+.chart-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
 @media (max-width:900px) {
     .skill-box {
         margin-bottom: 20px;

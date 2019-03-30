@@ -1,113 +1,146 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Portfolio Site (Work in progress)</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="stylesheets/index.css" />
-    <link rel="stylesheet" href="stylesheets/nav.css" />
-    <link rel="stylesheet" href="stylesheets/common.css" />
-    <link rel="icon" href="images/waterdrop.png">
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div class="nav-icon-container">
-          <a href="index.html" class="nav-link nav-logo">
-            <img src="images/home-icon.png" class="top-logo" id="home-logo"/>
-          </a>
-        </div>
-        <div class="nav-icon-container">
-          <a href="contact.html" class="nav-link nav-logo">
-            <img src="images/email-2-icon.png" class="top-logo" id="about-logo">
-          </a>
-        </div>
-        <div class="nav-icon-container">
-          <a href="portfolio.html" id="portfolio-link" class="nav-link nav-logo">
-            <img src="images/case-icon.png" class="top-logo" id="portfolio-logo">
-          </a>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Portfolio Site (Work in progress)</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="stylesheets/index.css" />
+  <link rel="stylesheet" href="stylesheets/nav.css" />
+  <link rel="stylesheet" href="stylesheets/common.css" />
+  <link rel="icon" href="images/waterdrop.png">
+</head>
 
-        <div class="nav-text-container">
-          <a href="index.html" class="nav-link nav-paragraph">Home</a>
-        </div>
-        <div class="nav-text-container">
-          <a href="contact.html" class="nav-link nav-paragraph">Contact</a>
-        </div>
-        <div class="dropdown nav-text-container">
-          <a href="portfolio.html" id="portfolio-link" class="nav-link nav-paragraph">Portfolio</a>
-          <div class="dropdown-content">
+<body>
+  <header>
+    <nav>
+      <div class="nav-icon-container">
+        <a href="index.html" class="nav-link nav-logo">
+          <img src="images/home-icon.png" class="top-logo" id="home-logo" />
+        </a>
+      </div>
+      <div class="nav-icon-container">
+        <a href="contact.html" class="nav-link nav-logo">
+          <img src="images/email-2-icon.png" class="top-logo" id="about-logo">
+        </a>
+      </div>
+      <div class="nav-icon-container">
+        <a href="portfolio.html" id="portfolio-link" class="nav-link nav-logo">
+          <img src="images/case-icon.png" class="top-logo" id="portfolio-logo">
+        </a>
+      </div>
 
-            <a href="etch-a-sketch/eas.html" style="margin-top: 25px;">Etch-a-Sketch</a>
-            <a href="calculator/calculator.html">Calculator</a>
-          </div>
-        </div>
+      <div class="nav-text-container">
+        <a href="index.html" class="nav-link nav-paragraph">Home</a>
+      </div>
+      <div class="nav-text-container">
+        <a href="contact.html" class="nav-link nav-paragraph">Contact</a>
+      </div>
+      <div class="dropdown nav-text-container">
+        <a href="portfolio.html" id="portfolio-link" class="nav-link nav-paragraph">Portfolio</a>
+        <div class="dropdown-content">
 
-        <div class="right-icon">
-          <a href="https://github.com/eempc" class="nav-link nav-logo">
-            <img class="top-logo" src="images/GitHub-Mark-Light-32px.png" id="git-logo" />
-          </a>
-        </div>
-        <div class="" style="display: none;">
-          <a href="" class="nav-link nav-logo">
-            <img class="top-logo" src="images/azure.png" id="azure-logo" />
-          </a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div id="second-row" class="primary-gradient-blue padding-30-0">
-        <img id="profile-pic" src="images/waterdrop.png" />
-        <div class="profile-texts">
-          <h1 id="profile-name" class="main-heading">Evelyn Cheng</h1>
-          <p id="profile-paragraph">
-Self-taught coder. Looking for a junior software developer role.
-          </p>
+          <a href="etch-a-sketch/eas.html" style="margin-top: 25px;">Etch-a-Sketch</a>
+          <a href="calculator/calculator.html">Calculator</a>
         </div>
       </div>
 
-      <div id="third-row" class="secondary-gradient-grey padding-30-0">
-        <h2 class="secondary-heading">Skills Overview</h2>
-        <p class="skill-paragraph">
-Initially I began coding in MQL4, the language of the MetaTrader trading software for creating trading bots.
-I have since gravitated towards learning C# .NET because I am primarily a Windows user.
-I have an understanding of the most common data structures and of Big-O complexity.
-In future I hope to learn more Python and Linux.
+      <div class="right-icon">
+        <a href="https://github.com/eempc" class="nav-link nav-logo">
+          <img class="top-logo" src="images/GitHub-Mark-Light-32px.png" id="git-logo" />
+        </a>
+      </div>
+      <div class="" style="display: none;">
+        <a href="" class="nav-link nav-logo">
+          <img class="top-logo" src="images/azure.png" id="azure-logo" />
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="second-row" class="primary-gradient-blue padding-30-0">
+      <img id="profile-pic" src="images/waterdrop.png" />
+      <div class="profile-texts">
+        <h1 id="profile-name" class="main-heading">Evelyn Cheng</h1>
+        <p id="profile-paragraph">
+          Self-taught coder. Looking for a junior software developer role.
         </p>
-        <div class="skill-box-row">
-          <div class="skill-box tertiary-gradient-light" id="box1">
-            <img src="images/file-code.png" />
-            <h3 class="tertiary-heading">Web Development</h3>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <div class="skill-box tertiary-gradient-light" id="box2">
-            <img src="images/database.png" />
-            <h3 class="tertiary-heading">Languages</h3>
-            <ul>
-              <li>C# .NET</li>
-              <li>MQL4</li>
+      </div>
+    </div>
 
-            </ul>
-          </div>
-          <div class="skill-box tertiary-gradient-light" id="box3">
-            <img src="images/device-computer.png" />
-            <h3 class="tertiary-heading">Other</h3>
-            <ul class="no-bullet">
-              <li>Blender</li>
-              <li>Photoshop Elements</li>
+    <div id="third-row" class="secondary-gradient-grey padding-30-0">
+      <h2 class="secondary-heading">Skills Overview</h2>
+      <p class="skill-paragraph">
+        Initially I began coding in MQL4, the language of the MetaTrader trading software for creating trading bots.
+        I have since gravitated towards learning C# .NET because I am primarily a Windows user.
+        I have an understanding of the most common data structures and of Big-O complexity.
+        In future I hope to learn more Python and Linux.
+      </p>
+      <div class="skill-box-row">
+        <div class="skill-box tertiary-gradient-light" id="box1">
+          <img src="images/file-code.png" />
+          <h3 class="tertiary-heading">Web Development</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skill-box tertiary-gradient-light" id="box2">
+          <img src="images/database.png" />
+          <h3 class="tertiary-heading">Languages</h3>
+          <ul>
+            <li>C# .NET</li>
+            <li>MQL4</li>
 
-            </ul>
-          </div>
+          </ul>
+        </div>
+        <div class="skill-box tertiary-gradient-light" id="box3">
+          <img src="images/device-computer.png" />
+          <h3 class="tertiary-heading">Other</h3>
+          <ul class="no-bullet">
+            <li>Blender</li>
+            <li>Photoshop Elements</li>
+
+          </ul>
         </div>
       </div>
-<!--
+    </div>
+
+    </div>
+    <!-- Chart Section -->
+    <div class="secondary-gradient-grey padding-30-0">
+      <h2 class="secondary-heading"></h2>
+      <div class="chart-container tertiary-gradient-light">
+        <canvas id="csharp-chart"></canvas>
+        <canvas id="frontend-chart"></canvas>
+        <canvas id="datastructures-chart"></canvas>
+        <canvas id="general-chart"></canvas>
+      </div>
+    </div>
+    <div>
+      <button onclick="chooseChart(0)">Button 0</button>
+      <button onclick="chooseChart(1)">Button 1</button>
+      <button onclick="chooseChart(2)">Button 2</button>
+      <button onclick="chooseChart(3)">Button 3</button>
+    </div>
+
+  </main>
+
+
+
+
+  <script src="scripts/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="scripts/barchart.js"></script>
+
+</body>
+
+</html>
+
+    <!--
 
 <div class="project-section secondary-gradient-grey padding-30-0">
   <h2 class="secondary-heading">C# .NET specifics</h2>
@@ -231,21 +264,3 @@ In future I hope to learn more Python and Linux.
     </div>
   </div>
 -->
-</div>
-      <div id="fifth-row">
-        <h2>Breakdown of Concepts</h2>
-        <canvas id="myChart"></canvas>
-      </div>
-
-
-    </main>
-
-
-
-
-    <script src="scripts/index.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <script src="scripts/barchart.js"></script>
-
-  </body>
-</html>
