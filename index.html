@@ -13,7 +13,7 @@
   <link rel="icon" href="images/waterdrop.png">
 </head>
 
-<body>
+<body onresize="resizeValue()">
   <header>
     <nav>
       <div class="nav-icon-container">
@@ -60,7 +60,7 @@
     </nav>
   </header>
   <main>
-    <div id="second-row" class="primary-gradient-blue padding-30-0">
+    <div id="second-row" class="primary-gradient padding-30-0">
       <img id="profile-pic" src="images/waterdrop.png" />
       <div class="profile-texts">
         <h1 id="profile-name" class="main-heading">Evelyn Cheng</h1>
@@ -70,7 +70,7 @@
       </div>
     </div>
 
-    <div id="third-row" class="secondary-gradient-grey padding-30-0">
+    <div id="third-row" class="secondary-gradient padding-30-0">
       <h2 class="secondary-heading">Skills Overview</h2>
       <p class="skill-paragraph">
         Initially I began coding in MQL4, the language of the MetaTrader trading software for creating trading bots.
@@ -79,7 +79,7 @@
         In future I hope to learn more Python and Linux.
       </p>
       <div class="skill-box-row">
-        <div class="skill-box tertiary-gradient-light" id="box1">
+        <div class="skill-box tertiary-gradient" id="box1">
           <img src="images/file-code.png" />
           <h3 class="tertiary-heading">Web Development</h3>
           <ul>
@@ -88,7 +88,7 @@
             <li>JavaScript</li>
           </ul>
         </div>
-        <div class="skill-box tertiary-gradient-light" id="box2">
+        <div class="skill-box tertiary-gradient" id="box2">
           <img src="images/database.png" />
           <h3 class="tertiary-heading">Languages</h3>
           <ul>
@@ -97,7 +97,7 @@
 
           </ul>
         </div>
-        <div class="skill-box tertiary-gradient-light" id="box3">
+        <div class="skill-box tertiary-gradient" id="box3">
           <img src="images/device-computer.png" />
           <h3 class="tertiary-heading">Other</h3>
           <ul class="no-bullet">
@@ -111,16 +111,16 @@
 
     </div>
     <!-- Chart Section (switch to position and z-order method later) -->
-    <div class="secondary-gradient-grey padding-30-0" id="chart-section">
+    <div class="secondary-gradient padding-30-0" id="chart-section">
       <h2 class="secondary-heading"></h2>
       <div class="chart-select">
-        <button class="chart-button" onclick="chooseChart(0)">Programming (C#)</button>
-        <button class="chart-button" onclick="chooseChart(1)">Front End</button>
-        <button class="chart-button" onclick="chooseChart(2)">Data Structures</button>
-        <button class="chart-button" onclick="chooseChart(3)">General</button>
+        <div class="chart-button" onclick="chooseChart(0)">Programming (C#)</div>
+        <div class="chart-button" onclick="chooseChart(1)">Front End</div>
+        <div class="chart-button" onclick="chooseChart(2)">Data Structures</div>
+        <div class="chart-button" onclick="chooseChart(3)">General</div>
       </div>
 
-      <div class="chart-container tertiary-gradient-light">
+      <div id="chart-container" class="tertiary-gradient">
         <canvas id="csharp-chart"></canvas>
         <canvas id="frontend-chart"></canvas>
         <canvas id="datastructures-chart"></canvas>
@@ -144,10 +144,10 @@
 
     <!--
 
-<div class="project-section secondary-gradient-grey padding-30-0">
+<div class="project-section secondary-gradient padding-30-0">
   <h2 class="secondary-heading">C# .NET specifics</h2>
   <div class="skill-box-row">
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Comfortable with</h3>
       <ul>
@@ -155,7 +155,7 @@
         <li>Windows Forms controls</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Can solve problems with</h3>
       <ul>
@@ -164,7 +164,7 @@
         <li>Regular expressions</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Improving on</h3>
       <ul>
@@ -174,7 +174,7 @@
         <li>WPF XAML</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Pending learning</h3>
       <ul>
@@ -187,10 +187,10 @@
 </div>
 
 
-<div class="project-section secondary-gradient-grey padding-30-0">
+<div class="project-section secondary-gradient padding-30-0">
   <h2 class="secondary-heading">Computing and data structures</h2>
   <div class="skill-box-row">
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Comfortable with</h3>
       <ul>
@@ -198,7 +198,7 @@
         <li>Dictionaries and hashes</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Can solve problems with</h3>
       <ul>
@@ -206,7 +206,7 @@
         <li>Stacks and queues</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Improving on</h3>
       <ul>
@@ -214,7 +214,7 @@
         <li>Tree data structures</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Pending learning</h3>
       <ul>
@@ -226,10 +226,10 @@
   </div>
 </div>
 
-<div class="project-section secondary-gradient-grey padding-30-0">
+<div class="project-section secondary-gradient padding-30-0">
   <h2 class="secondary-heading">Front end specifics</h2>
   <div class="skill-box-row">
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Comfortable with</h3>
       <ul>
@@ -238,7 +238,7 @@
         <li>Chrome Dev Tools</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Can solve problems with</h3>
       <ul>
@@ -247,7 +247,7 @@
         <li>JavaScript</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Improving on</h3>
       <ul>
@@ -256,7 +256,7 @@
         <li>Bootstrap</li>
       </ul>
     </div>
-    <div class="skill-box tertiary-gradient-light">
+    <div class="skill-box tertiary-gradient">
       <img src="images/waterdrop.png">
       <h3 class="tertiary-heading">Pending learning</h3>
       <ul>

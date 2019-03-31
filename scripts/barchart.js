@@ -1,10 +1,6 @@
-// Sorting 2D array with the assistance of a Comparator function, usage: array.sort(Comparator)
-function Comparator(a, b) {
-    var index = 0;
-    if (a[index] > b[index]) return -1;
-    if (a[index] < b[index]) return 1;
-    return 0; // in case of equals, which you can then move on to sorting by a second column
-}
+
+
+
 
 // Load up my arrays and sort them because I can't be bothered to do it manually
 // Should become objects (tuple) in future
@@ -29,7 +25,7 @@ var arrayCSharp = [
 var arrayFrontEnd = [
     [3, "Flex box"],
     [2, "Grids"],
-    [2, "Chart.JS"],
+    [2, "Chart.js"],
     [3, "Responsive pages"],
     [0, "Multi-browser support"],
     [0, "One JS Framework"],
@@ -58,15 +54,6 @@ var arrayGeneral = [
     [1, "TDD"]
 ]
 
-function getArrayColumn(matrix, col) {
-    var column = [];
-    for (var i = 0; i < matrix.length; i++) {
-        column.push(matrix[i][col]);
-    }
-    return column;
-}
-
-
 let currentChartIndex = 0;
 chooseChart(0);
 
@@ -91,11 +78,11 @@ function chooseChart(choice) {
             break;
     }
 
-    var buttons = document.querySelectorAll("button");
+    var buttons = document.getElementsByClassName("chart-button");
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].style.backgroundColor = "darkgrey";
+        buttons[i].classList.remove("tertiary-gradient");
     }
-    buttons[choice].style.backgroundColor = "blue";
+    buttons[choice].classList.add("tertiary-gradient");
 }
 
 function makeChart(dataMatrix2D, canvasID, chartTitle) {
@@ -130,6 +117,14 @@ function makeChart(dataMatrix2D, canvasID, chartTitle) {
 
         // Configuration options go here
         options: {
+            layout: {
+                padding: {
+                    left: 5,
+                    right: 25,
+                    top: 5,
+                    bottom: 5,
+                }
+            },
             title: {
                 display: true,
                 text: chartTitle,
@@ -150,8 +145,9 @@ function makeChart(dataMatrix2D, canvasID, chartTitle) {
                         display: false,
                         labelString: "Concept",
                         fontColor: "black",
-                        fontSize: 14
+
                     },
+
                     ticks: {
                         fontColor: "black",
                         fontSize: 10
@@ -162,10 +158,11 @@ function makeChart(dataMatrix2D, canvasID, chartTitle) {
                         display: true,
                         labelString: "Competence level",
                         fontColor: "black",
-                        fontSize: 14
+                        fontSize: 16
                     },
                     ticks: {
                         autoSkip: false,
+                        minRotation: 45,
                         maxRotation: 90,
                         fontColor: "black",
                         fontSize: 12,
@@ -175,13 +172,13 @@ function makeChart(dataMatrix2D, canvasID, chartTitle) {
                             //return '$' + value;
                             switch (true) {
                                 case (value < 1):
-                                    return "Uninitiated";
+                                    return "☆☆☆ Uninitiated";
                                 case (value < 2):
-                                    return "Improving";
+                                    return "★☆☆ Improving";
                                 case (value < 3):
-                                    return "Capable";
+                                    return "★★☆ Capable";
                                 case (value < 4):
-                                    return "Comfortable";
+                                    return "★★★ Comfortable";
                                 default:
                                     return "N/A";
                             }
@@ -191,4 +188,26 @@ function makeChart(dataMatrix2D, canvasID, chartTitle) {
             }
         }
     });
+}
+
+function getArrayColumn(matrix, col) {
+    var column = [];
+    for (var i = 0; i < matrix.length; i++) {
+        column.push(matrix[i][col]);
+    }
+    return column;
+}
+
+function resizeValue() {
+    let chartBox = document.getElementById("chart-container");
+    let width = chartBox.offsetWidth
+    console.log(width);
+}
+
+// Sorting 2D array with the assistance of a Comparator function, usage: array.sort(Comparator)
+function Comparator(a, b) {
+    var index = 0;
+    if (a[index] > b[index]) return -1;
+    if (a[index] < b[index]) return 1;
+    return 0; // in case of equals, which you can then move on to sorting by a second column
 }

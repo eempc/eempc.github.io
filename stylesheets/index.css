@@ -59,7 +59,7 @@ h3 {
     align-items: center;
     width: 220px;
     max-width: 220px;
-    box-shadow: 1px 1px 1px 1px #D8DDFF;
+    box-shadow: 1px 1px 1px 1px rgb(150,150,255);
 }
 
 .skill-box * {
@@ -84,7 +84,7 @@ li {
     padding-bottom: 0.25em;
 }
 
-.chart-container {
+#chart-container {
     max-width: 1000px;
     margin: auto;
 }
@@ -97,12 +97,13 @@ li {
 }
 
 .chart-button {
-    width: 150px;
+    cursor: pointer;
+    width: 250px;
     border-radius: 0px 0px 0px 0px;
     border: none;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    padding: 10px 5px;
+    background-color: lightgrey;
+    padding: 10px 10px;
+    text-align: center;
 }
 
 @media (max-width:900px) {
