@@ -111,8 +111,15 @@
 
     </div>
     <!-- Chart Section (switch to position and z-order method later) -->
-    <div class="secondary-gradient-grey padding-30-0">
+    <div class="secondary-gradient-grey padding-30-0" id="chart-section">
       <h2 class="secondary-heading"></h2>
+      <div class="chart-select">
+        <button class="chart-button" onclick="chooseChart(0)">Programming (C#)</button>
+        <button class="chart-button" onclick="chooseChart(1)">Front End</button>
+        <button class="chart-button" onclick="chooseChart(2)">Data Structures</button>
+        <button class="chart-button" onclick="chooseChart(3)">General</button>
+      </div>
+
       <div class="chart-container tertiary-gradient-light">
         <canvas id="csharp-chart"></canvas>
         <canvas id="frontend-chart"></canvas>
@@ -120,12 +127,7 @@
         <canvas id="general-chart"></canvas>
       </div>
     </div>
-    <div>
-      <button onclick="chooseChart(0)">Button 0</button>
-      <button onclick="chooseChart(1)">Button 1</button>
-      <button onclick="chooseChart(2)">Button 2</button>
-      <button onclick="chooseChart(3)">Button 3</button>
-    </div>
+
 
   </main>
 

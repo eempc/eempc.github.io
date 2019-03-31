@@ -89,6 +89,22 @@ li {
     margin: auto;
 }
 
+.chart-select {
+    margin: auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart-button {
+    width: 150px;
+    border-radius: 0px 0px 0px 0px;
+    border: none;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    padding: 10px 5px;
+}
+
 @media (max-width:900px) {
     .skill-box {
         margin-bottom: 20px;
