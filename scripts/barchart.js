@@ -21,6 +21,7 @@ var arrayLanguages = [
     [2, "JavaScript"],
     [1, "XAML"],
     [3, "HTML"],
+    [2, "CSS"],
     [1, "Ruby"],
     [3, "MQL4"],
     [0, "Solidity"],
@@ -32,6 +33,7 @@ var arrayDotNet = [
   [2, "LINQ and SQL queries"],
   [1, "WPF XAML"],
   [0, "Azure deployment"],
+  [0, "Xamarin"]
 ];
 
 var arrayFrontEnd = [
@@ -49,12 +51,11 @@ var arrayFrontEnd = [
 
 var arrayDataStructures = [
     [3, "Arrays"],
-    [3, "Big O Complexity"],
+    [2, "Big O Complexity"],
     [2, "Stacks"],
     [2, "Queues"],
     [1, "Linked lists"],
-    [1, "Binary trees"],
-    [0, "Other trees"],
+    [0, "Trees"],
 ];
 
 var arrayGeneral = [
@@ -66,6 +67,16 @@ var arrayGeneral = [
     [1, "TDD"],
 ];
 
+var arraySoftwarePackages = [
+    [3, "Visual Studio"],
+    [3, "Visual Studio Code"],
+    [2, "Android Studio"],
+    [2, "Blender"],
+    [2, "Photoshop Elements"],
+    [2, "Microsoft Office"]
+    [0, "SLDC Software"]
+];
+
 let currentChartIndex = 0;
 chooseChart(0);
 
@@ -74,7 +85,7 @@ function chooseChart(choice) {
     currentChartIndex = choice;
     switch (choice) {
         case 0:
-            makeChart(arrayConcepts, "programming-chart", "Programming Concepts (C#)");
+            makeChart(arrayConcepts, "programming-chart", "Programming Concepts");
             break;
         case 2:
             makeChart(arrayFrontEnd, "frontend-chart", "Front End Knowledge");
@@ -98,6 +109,13 @@ function chooseChart(choice) {
 }
 
 function makeChart(dataMatrix2D, canvasID, chartTitle) {
+    //Clean up the chart js monitor
+    var monitors = document.getElementsByClassName("chartjs-size-monitor");
+    while (monitors[0]) {
+        monitors[0].remove();
+    }
+
+    // Sort array
     dataMatrix2D.sort(Comparator);
     var arrayAxisX = getArrayColumn(dataMatrix2D, 0);
     var arrayAxisY = getArrayColumn(dataMatrix2D, 1);
@@ -168,7 +186,7 @@ function makeChart(dataMatrix2D, canvasID, chartTitle) {
                 xAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: "Competence level",
+                        labelString: "Proficiency level",
                         fontColor: "black",
                         fontSize: 16
                     },
