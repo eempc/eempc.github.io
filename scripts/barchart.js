@@ -108,12 +108,16 @@ function chooseChart(choice) {
     buttons[choice].classList.add("quarternary-gradient");
 }
 
-function makeChart(dataMatrix2D, canvasID, chartTitle) {
+function removeMonitors() {
     //Clean up the chart js monitor
     var monitors = document.getElementsByClassName("chartjs-size-monitor");
-    while (monitors[0]) {
-        monitors[0].remove();
+    while (monitors[monitors.length - 1]) {
+        monitors[monitors.length - 1].remove();
     }
+}
+
+function makeChart(dataMatrix2D, canvasID, chartTitle) {
+    removeMonitors();
 
     // Sort array
     dataMatrix2D.sort(Comparator);

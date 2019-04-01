@@ -69,7 +69,7 @@
       <div class="profile-texts">
         <h1 id="profile-name" class="main-heading">Evelyn Cheng</h1>
         <p id="profile-paragraph">
-          Self-taught coder. Looking for a junior software developer role.
+          Self-taught coder. Looking for a junior software developer role. I have a cat.
         </p>
       </div>
     </div>
@@ -83,25 +83,25 @@
         In future I hope to learn more Python and Linux.
       </p>
       <div class="skill-box-row">
-        <div class="skill-box quarternary-gradient" id="box1">
+        <div class="skill-box quarternary-gradient box-shadow-0">
           <img src="images/file-code.png" />
-          <h3 class="tertiary-heading">Web Development</h3>
+          <h3 class="tertiary-heading">Front End Proficiency</h3>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
           </ul>
         </div>
-        <div class="skill-box quarternary-gradient" id="box2">
+        <div class="skill-box quarternary-gradient box-shadow-0">
           <img src="images/database.png" />
-          <h3 class="tertiary-heading">Languages</h3>
+          <h3 class="tertiary-heading">Language Proficiency</h3>
           <ul>
             <li>C# .NET</li>
             <li>MQL4</li>
 
           </ul>
         </div>
-        <div class="skill-box quarternary-gradient" id="box3">
+        <div class="skill-box quarternary-gradient box-shadow-0">
           <img src="images/device-computer.png" />
           <h3 class="tertiary-heading">Other</h3>
           <ul class="no-bullet">
@@ -114,20 +114,21 @@
     </div>
 
     </div>
-    <!-- Chart Section (switch to position and z-order method later) -->
+
+    <!-- Chart Section -->
     <div class="tertiary-gradient row-padding" id="chart-section">
       <h2 class="secondary-heading">Knowledge Specifics</h2>
       <!-- "tab" control -->
       <div class="chart-select">
-        <div class="chart-button" onclick="chooseChart(0)"><span>Programming Knowledge</span></div>
-        <div class="chart-button" onclick="chooseChart(1)"><span>.NET Knowledge</span></div>
-        <div class="chart-button" onclick="chooseChart(2)"><span>Front End</span></div>
-        <div class="chart-button" onclick="chooseChart(3)"><span>Data Structures</span></div>
-        <div class="chart-button" onclick="chooseChart(4)"><span>General</span></div>
+        <div class="chart-button box-shadow-0" onclick="chooseChart(0)"><span>Programming Knowledge</span></div>
+        <div class="chart-button box-shadow-0" onclick="chooseChart(1)"><span>.NET Knowledge</span></div>
+        <div class="chart-button box-shadow-0" onclick="chooseChart(2)"><span>Front End</span></div>
+        <div class="chart-button box-shadow-0" onclick="chooseChart(3)"><span>Data Structures</span></div>
+        <div class="chart-button box-shadow-0" onclick="chooseChart(4)"><span>General</span></div>
       </div>
 
       <!-- chart canvases -->
-      <div id="chart-container" class="quarternary-gradient">
+      <div id="chart-container" class="quarternary-gradient  box-shadow-0">
         <canvas id="programming-chart"></canvas>
         <canvas id="dotnet-chart"></canvas>
         <canvas id="frontend-chart"></canvas>
@@ -150,127 +151,3 @@
 
 </html>
 
-<!--
-
-<div class="project-section secondary-gradient row-padding">
-  <h2 class="secondary-heading">C# .NET specifics</h2>
-  <div class="skill-box-row">
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Comfortable with</h3>
-      <ul>
-        <li>Primitive data types</li>
-        <li>Windows Forms controls</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Can solve problems with</h3>
-      <ul>
-        <li>Objects, classes and inheritance</li>
-        <li>LINQ and SQL queries</li>
-        <li>Regular expressions</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Improving on</h3>
-      <ul>
-        <li>ASP.NET Razor pages</li>
-        <li>Delegate usage</li>
-        <li>Asynchronous methods</li>
-        <li>WPF XAML</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Pending learning</h3>
-      <ul>
-        <li>Events and exceptions</li>
-        <li>Azure deployment</li>
-        <li>Security</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-<div class="project-section secondary-gradient row-padding">
-  <h2 class="secondary-heading">Computing and data structures</h2>
-  <div class="skill-box-row">
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Comfortable with</h3>
-      <ul>
-        <li>Arrays</li>
-        <li>Dictionaries and hashes</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Can solve problems with</h3>
-      <ul>
-        <li>Recursion</li>
-        <li>Stacks and queues</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Improving on</h3>
-      <ul>
-        <li>Linked lists</li>
-        <li>Tree data structures</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Pending learning</h3>
-      <ul>
-        <li>SDLC</li>
-        <li>SOLID principles</li>
-        <li>TDD</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="project-section secondary-gradient row-padding">
-  <h2 class="secondary-heading">Front end specifics</h2>
-  <div class="skill-box-row">
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Comfortable with</h3>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Chrome Dev Tools</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Can solve problems with</h3>
-      <ul>
-        <li>Responsive webpages</li>
-        <li>Grid and flexbox</li>
-        <li>JavaScript</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Improving on</h3>
-      <ul>
-        <li>One JS framework</li>
-        <li>Tables</li>
-        <li>Bootstrap</li>
-      </ul>
-    </div>
-    <div class="skill-box tertiary-gradient">
-      <img src="images/waterdrop.png">
-      <h3 class="tertiary-heading">Pending learning</h3>
-      <ul>
-        <li>Multi-browser support</li>
-        <li>Jasmine TDD</li>
-      </ul>
-    </div>
-  </div>
--->

@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
 }
 
 #profile-row > * {
@@ -73,6 +74,7 @@ h3 {
     border: 0;
     background: radial-gradient(circle, rgba(78, 140, 255, 0.8) 0%, rgb(137, 177, 250, 1) 100%);
     padding: 10px;
+
 }
 
 ul {
@@ -86,11 +88,13 @@ li {
 
 #chart-section {
     padding-bottom: 60px;
+
 }
 
 #chart-container {
     max-width: 1000px;
     margin: auto;
+
 }
 
 .chart-select {
@@ -104,13 +108,13 @@ li {
     cursor: pointer;
     width: 200px;
     border-radius: 0px 0px 0px 0px;
-    border: none;
-    background-color: lightgrey;
+    background-color: white;
     padding: 10px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: 0.3s ease-in;
 }
 
 .chart-button:hover {
@@ -144,5 +148,9 @@ li {
         width: 320px;
         max-width: 320px;
         margin: 5px;
+    }
+
+    #chart-section {
+        display: none;
     }
 }

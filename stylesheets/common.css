@@ -1,5 +1,5 @@
 body {
-    background-color: darkgray;
+    background-color: rgb(54, 54, 54);
     max-width: 1200px;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,34 +8,35 @@ body {
 .primary-gradient {
     background: linear-gradient(
         135deg,
-        #79C4EC 0%,
+        #5D4CEC 0%,
         #5D4CEC 25%,
         #5D4CEC 75%,
-        #79C4EC 100%
+        #5D4CEC 100%
     );
 }
 
 .secondary-gradient {
     background: repeating-linear-gradient(45deg,
         #8194FD 0%,
-        #a8c2fe 25%,
+        #8194FD 25%,
         #8194FD 50%
     );
 }
 
 .tertiary-gradient {
     background: repeating-linear-gradient(135deg,
-    #8194FD 0%,
-    #a8c2fe 25%,
-    #8194FD 50%);
+    #a8c2fe 0%,
+    #8194FD 25%,
+    #a8c2fe 50%
+    );
 }
 
 .quarternary-gradient {
     background: linear-gradient(45deg,
-    rgb(179, 199, 236) 00%,
-    rgb(148, 157, 238) 33%,
-    rgb(148, 157, 238) 66%,
-    rgb(179, 199, 236) 100%);
+    #d8d8d8 00%,
+    #d8d8d8 33%,
+    #d8d8d8 66%,
+    #d8d8d8 100%);
 }
 
 .hidden {
@@ -47,12 +48,20 @@ main {
 }
 
 .row-padding {
-    padding: 30px 0px 10px 0px;
+    padding: 30px 0px 30px 0px;
 }
 
 .main-heading {
     font-size: 3em;
     color: azure;
+}
+
+.box-shadow-0 {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.box-shadow-1 {
+        box-shadow: 2px 2px 14px 1px rgba(0, 0, 0, 0.59);
 }
 
 @media (max-width: 690px) {
