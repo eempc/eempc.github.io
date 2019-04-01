@@ -6,15 +6,36 @@ body {
 }
 
 .primary-gradient {
-    background: linear-gradient(to right, rgb(199, 204, 255) 0%, #436eee 33%, #436eee 66%, rgb(199, 204, 255) 100%);
+    background: linear-gradient(
+        135deg,
+        #79C4EC 0%,
+        #5D4CEC 25%,
+        #5D4CEC 75%,
+        #79C4EC 100%
+    );
 }
 
 .secondary-gradient {
-    background: linear-gradient(to bottom, rgb(35, 109, 221) 0%, rgb(255, 232, 232) 100%)
+    background: repeating-linear-gradient(45deg,
+        #8194FD 0%,
+        #a8c2fe 25%,
+        #8194FD 50%
+    );
 }
 
 .tertiary-gradient {
-    background: linear-gradient(to bottom, rgb(104, 118, 241) 0%, rgb(165, 192, 241) 33%, rgb(165,192,241) 75%, rgb(146, 157, 255) 100%);
+    background: repeating-linear-gradient(135deg,
+    #8194FD 0%,
+    #a8c2fe 25%,
+    #8194FD 50%);
+}
+
+.quarternary-gradient {
+    background: linear-gradient(45deg,
+    rgb(179, 199, 236) 00%,
+    rgb(148, 157, 238) 33%,
+    rgb(148, 157, 238) 66%,
+    rgb(179, 199, 236) 100%);
 }
 
 .hidden {
@@ -25,16 +46,14 @@ main {
     margin: 0px;
 }
 
-.padding-30-0 {
-    padding: 30px 0px;
+.row-padding {
+    padding: 30px 0px 30px 0px;
 }
 
 .main-heading {
     font-size: 3em;
     color: azure;
 }
-
-
 
 @media (max-width: 690px) {
     .main-heading {

@@ -13,6 +13,9 @@ nav {
     align-items: center;
     padding-top: 3px;
     height: 52px;
+    box-shadow: 0px 4px 8px -1px black;
+    position: absolute;
+    width: 1200px;
 }
 
 .nav-text-container {
@@ -56,7 +59,8 @@ nav {
 }
 
 .right-icon {
-    margin-left: auto;;
+    align-self: flex-end;
+    right: 0;
 }
 
 .dropdown {

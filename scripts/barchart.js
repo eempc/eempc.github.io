@@ -1,25 +1,37 @@
 
 
-
-
 // Load up my arrays and sort them because I can't be bothered to do it manually
 // Should become objects (tuple) in future
-var arrayCSharp = [
+var arrayConcepts = [
     [3, "Primitive data types"],
-    [3, "Windows Form controls"],
     [2, "Objects, classes, inheritance"],
-    [2, "LINQ and SQL queries"],
     [2, "Regular expressions"],
-    [1, "ASP.NET Razor"],
     [1, "Delegates"],
     [1, "Asychronous methods"],
-    [1, "WPF XAML"],
-    [1, "WPF data binding"],
     [0, "Exceptions"],
-    [0, "Azure deployment"],
     [0, "Security"],
     [0, "Unsafe methods"],
-    [3, "Recursive methods"]
+    [2, "Recursive methods"],
+];
+
+var arrayLanguages = [
+    [3, "C#"],
+    [1, "Python"],
+    [1, "Java"],
+    [2, "JavaScript"],
+    [1, "XAML"],
+    [3, "HTML"],
+    [1, "Ruby"],
+    [3, "MQL4"],
+    [0, "Solidity"],
+];
+
+var arrayDotNet = [
+  [3, "Windows Form controls"],
+  [1, "Razor Pages"],
+  [2, "LINQ and SQL queries"],
+  [1, "WPF XAML"],
+  [0, "Azure deployment"],
 ];
 
 var arrayFrontEnd = [
@@ -32,7 +44,7 @@ var arrayFrontEnd = [
     [1, "Forms"],
     [3, "Event handlers"],
     [0, "Bootstrap"],
-    [1, "Transforms"]
+    [1, "Transforms"],
 ];
 
 var arrayDataStructures = [
@@ -42,7 +54,7 @@ var arrayDataStructures = [
     [2, "Queues"],
     [1, "Linked lists"],
     [1, "Binary trees"],
-    [0, "Other trees"]
+    [0, "Other trees"],
 ];
 
 var arrayGeneral = [
@@ -51,38 +63,38 @@ var arrayGeneral = [
     [2, "Git version control"],
     [1, "SLDC"],
     [0, "SOLID"],
-    [1, "TDD"]
-]
+    [1, "TDD"],
+];
 
 let currentChartIndex = 0;
 chooseChart(0);
 
 // Note to self: make objects
 function chooseChart(choice) {
+    currentChartIndex = choice;
     switch (choice) {
         case 0:
-            makeChart(arrayCSharp, "csharp-chart", "Programming Concepts (C#)");
-            currentChartIndex = 0;
-            break;
-        case 1:
-            makeChart(arrayFrontEnd, "frontend-chart", "Front End Knowledge");
-            currentChartIndex = 1;
+            makeChart(arrayConcepts, "programming-chart", "Programming Concepts (C#)");
             break;
         case 2:
-            makeChart(arrayDataStructures, "datastructures-chart", "Data Structures Knowledge");
-            currentChartIndex = 2;
+            makeChart(arrayFrontEnd, "frontend-chart", "Front End Knowledge");
             break;
         case 3:
-            makeChart(arrayGeneral, "general-chart", "General Software Development");
-            currentChartIndex = 3;
+            makeChart(arrayDataStructures, "datastructures-chart", "Data Structures Knowledge");
+            break;
+        case 4:
+            makeChart(arrayGeneral, "software-chart", "General Software Development");
+            break;
+        case 1:
+            makeChart(arrayDotNet, "dotnet-chart", ".NET Knowledge");
             break;
     }
 
     var buttons = document.getElementsByClassName("chart-button");
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("tertiary-gradient");
+        buttons[i].classList.remove("quarternary-gradient");
     }
-    buttons[choice].classList.add("tertiary-gradient");
+    buttons[choice].classList.add("quarternary-gradient");
 }
 
 function makeChart(dataMatrix2D, canvasID, chartTitle) {
@@ -198,13 +210,7 @@ function getArrayColumn(matrix, col) {
     return column;
 }
 
-function resizeValue() {
-    let chartBox = document.getElementById("chart-container");
-    let width = chartBox.offsetWidth
-    console.log(width);
-}
-
-// Sorting 2D array with the assistance of a Comparator function, usage: array.sort(Comparator)
+// Sorting 2D array by sub-column with the assistance of a Comparator function, usage: array.sort(Comparator)
 function Comparator(a, b) {
     var index = 0;
     if (a[index] > b[index]) return -1;

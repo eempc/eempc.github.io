@@ -1,17 +1,13 @@
 h1 {
     margin: 0px;
-}
-
-main {
-    margin: auto;
     text-align: center;
-
 }
 
 #address-section {
     color: azure;
 }
 
-.contact-section {
-    height: 80vh;
+.contact-details {
+    min-height: 100vh;
+    text-align: center;
 }

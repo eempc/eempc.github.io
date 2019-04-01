@@ -13,7 +13,7 @@
   <link rel="icon" href="images/waterdrop.png">
 </head>
 
-<body onresize="resizeValue()">
+<body>
   <header>
     <nav>
       <div class="nav-icon-container">
@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <div class="right-icon">
+      <div class="nav-icon-container" style="display: contents;">
         <a href="https://github.com/eempc" class="nav-link nav-logo">
           <img class="top-logo" src="images/GitHub-Mark-Light-32px.png" id="git-logo" />
         </a>
@@ -58,9 +58,10 @@
         </a>
       </div>
     </nav>
+    <div style="height:55px;"></div>
   </header>
   <main>
-    <div id="second-row" class="primary-gradient padding-30-0">
+    <div id="profile-row" class="primary-gradient row-padding">
       <img id="profile-pic" src="images/waterdrop.png" />
       <div class="profile-texts">
         <h1 id="profile-name" class="main-heading">Evelyn Cheng</h1>
@@ -70,7 +71,7 @@
       </div>
     </div>
 
-    <div id="third-row" class="secondary-gradient padding-30-0">
+    <div id="third-row" class="secondary-gradient row-padding">
       <h2 class="secondary-heading">Skills Overview</h2>
       <p class="skill-paragraph">
         Initially I began coding in MQL4, the language of the MetaTrader trading software for creating trading bots.
@@ -79,7 +80,7 @@
         In future I hope to learn more Python and Linux.
       </p>
       <div class="skill-box-row">
-        <div class="skill-box tertiary-gradient" id="box1">
+        <div class="skill-box quarternary-gradient" id="box1">
           <img src="images/file-code.png" />
           <h3 class="tertiary-heading">Web Development</h3>
           <ul>
@@ -88,7 +89,7 @@
             <li>JavaScript</li>
           </ul>
         </div>
-        <div class="skill-box tertiary-gradient" id="box2">
+        <div class="skill-box quarternary-gradient" id="box2">
           <img src="images/database.png" />
           <h3 class="tertiary-heading">Languages</h3>
           <ul>
@@ -97,7 +98,7 @@
 
           </ul>
         </div>
-        <div class="skill-box tertiary-gradient" id="box3">
+        <div class="skill-box quarternary-gradient" id="box3">
           <img src="images/device-computer.png" />
           <h3 class="tertiary-heading">Other</h3>
           <ul class="no-bullet">
@@ -111,20 +112,24 @@
 
     </div>
     <!-- Chart Section (switch to position and z-order method later) -->
-    <div class="secondary-gradient padding-30-0" id="chart-section">
+    <div class="tertiary-gradient row-padding" id="chart-section">
       <h2 class="secondary-heading"></h2>
+      <!-- "tab" control -->
       <div class="chart-select">
-        <div class="chart-button" onclick="chooseChart(0)">Programming (C#)</div>
-        <div class="chart-button" onclick="chooseChart(1)">Front End</div>
-        <div class="chart-button" onclick="chooseChart(2)">Data Structures</div>
-        <div class="chart-button" onclick="chooseChart(3)">General</div>
+        <div class="chart-button" onclick="chooseChart(0)"><span>Programming Knowledge</span></div>
+        <div class="chart-button" onclick="chooseChart(1)"><span>.NET Knowledge</span></div>
+        <div class="chart-button" onclick="chooseChart(2)"><span>Front End</span></div>
+        <div class="chart-button" onclick="chooseChart(3)"><span>Data Structures</span></div>
+        <div class="chart-button" onclick="chooseChart(4)"><span>General</span></div>
       </div>
 
-      <div id="chart-container" class="tertiary-gradient">
-        <canvas id="csharp-chart"></canvas>
+      <!-- chart canvases -->
+      <div id="chart-container" class="quarternary-gradient">
+        <canvas id="programming-chart"></canvas>
+        <canvas id="dotnet-chart"></canvas>
         <canvas id="frontend-chart"></canvas>
         <canvas id="datastructures-chart"></canvas>
-        <canvas id="general-chart"></canvas>
+        <canvas id="software-chart"></canvas>
       </div>
     </div>
 
@@ -144,7 +149,7 @@
 
     <!--
 
-<div class="project-section secondary-gradient padding-30-0">
+<div class="project-section secondary-gradient row-padding">
   <h2 class="secondary-heading">C# .NET specifics</h2>
   <div class="skill-box-row">
     <div class="skill-box tertiary-gradient">
@@ -187,7 +192,7 @@
 </div>
 
 
-<div class="project-section secondary-gradient padding-30-0">
+<div class="project-section secondary-gradient row-padding">
   <h2 class="secondary-heading">Computing and data structures</h2>
   <div class="skill-box-row">
     <div class="skill-box tertiary-gradient">
@@ -226,7 +231,7 @@
   </div>
 </div>
 
-<div class="project-section secondary-gradient padding-30-0">
+<div class="project-section secondary-gradient row-padding">
   <h2 class="secondary-heading">Front end specifics</h2>
   <div class="skill-box-row">
     <div class="skill-box tertiary-gradient">
