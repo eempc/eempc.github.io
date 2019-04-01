@@ -11,33 +11,34 @@ header {
 nav {
     display: flex;
     align-items: center;
-    padding-top: 3px;
     height: 52px;
-    box-shadow: 0px 4px 8px -1px black;
-    position: absolute;
-    width: 1200px;
+    margin-bottom: 3px;
+    box-shadow: 0px 5px 8px -1px rgba(0, 0, 0, 0.8);
+}
+
+.right-icon {
+    margin-left: auto;
 }
 
 .nav-text-container {
     width: 150px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
 }
 
 .nav-paragraph {
     color: azure;
     text-decoration: none;
-    padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
     border-bottom: 1px solid transparent;
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.4s ease-in;
+
 }
 
-.nav-paragraph:hover {
+.nav-text-container:hover {
     background-color: rgb(44, 137, 224);
     border-bottom: 1px solid white;
-    font-weight: bold;
-
 }
 
 .nav-icon-container {
@@ -56,11 +57,6 @@ nav {
 .top-logo:hover {
     background-color: rgb(44, 137, 224);
 
-}
-
-.right-icon {
-    align-self: flex-end;
-    right: 0;
 }
 
 .dropdown {
@@ -101,6 +97,8 @@ nav {
 .dropdown:hover #portfolio-link {
     background-color: rgb(44, 137, 224);
 }
+
+
 
 @media (max-width: 640px) {
     nav {
