@@ -6,22 +6,18 @@ header {
     background-color: rgb(93, 76, 255);
     max-width: 1200px;
     margin: auto;
-
 }
 
 nav {
     display: flex;
     align-items: center;
     height: 52px;
-
 }
 
 .right-icon {
     margin-left: auto;
     justify-self: flex-end;
 }
-
-
 
 .nav-text-container {
     width: 150px;
@@ -76,14 +72,11 @@ nav {
 
 .dropdown-content a {
     color: white;
-    padding: 12px;
+    padding: 6px 12px;
     text-decoration: none;
     display: block;
     background-color: rgba(10, 10, 189, 0.822);
     border-bottom: 1px solid transparent;
-    font-family: Arial,
-    Helvetica,
-    sans-serif;
 }
 
 .dropdown-content a:hover {
@@ -91,12 +84,12 @@ nav {
     border-bottom: 1px solid white;
     transition: 0.4s;
 }
-
+/* drop down disabled for now
 .dropdown:hover .dropdown-content {
     display: block;
     transition: 0.5s;
 }
-
+*/
 .dropdown:hover #portfolio-link {
     background-color: rgb(44, 137, 224);
 }

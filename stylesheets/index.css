@@ -11,14 +11,15 @@
     margin-left: 25px;
     margin-right: 25px;
 }
-
+/*
 #profile-pic {
     max-width: 15%;
     min-width: 100px;
 }
-
+*/
 #profile-name {
     max-width: 600px;
+    text-align: center;
 }
 
 #profile-paragraph {

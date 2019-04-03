@@ -12,6 +12,7 @@ var arrayConcepts = [
     [0, "Security"],
     [0, "Unsafe methods"],
     [2, "Recursive methods"],
+    [1, "Debugging"],
 ];
 
 var arrayLanguages = [
@@ -30,10 +31,10 @@ var arrayLanguages = [
 var arrayDotNet = [
   [3, "Windows Form controls"],
   [1, "Razor Pages"],
-  [2, "LINQ and SQL queries"],
+  [1, "LINQ and SQL queries"],
   [1, "WPF XAML"],
   [0, "Azure deployment"],
-  [0, "Xamarin"]
+  [0, "Xamarin"],
 ];
 
 var arrayFrontEnd = [
@@ -73,8 +74,8 @@ var arraySoftwarePackages = [
     [2, "Android Studio"],
     [2, "Blender"],
     [2, "Photoshop Elements"],
-    [2, "Microsoft Office"]
-    [0, "SLDC Software"]
+    [2, "Microsoft Office"],
+    [0, ""],
 ];
 
 let currentChartIndex = 0;
@@ -143,7 +144,7 @@ function makeChart(dataMatrix2D, canvasID, chartTitle) {
             labels: arrayAxisY,
             datasets: [{
                 label: 'Data',
-                backgroundColor: 'rgb(0, 0, 132)',
+                backgroundColor: 'rgb(0, 0, 182)',
                 borderColor: 'rgb(255, 99, 132)',
                 data: arrayAxisX
             }]
