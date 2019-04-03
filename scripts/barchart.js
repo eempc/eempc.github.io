@@ -53,10 +53,11 @@ var arrayFrontEnd = [
 var arrayDataStructures = [
     [3, "Arrays"],
     [2, "Big O Complexity"],
-    [2, "Stacks"],
-    [2, "Queues"],
+    [1, "Stacks"],
+    [1, "Queues"],
     [1, "Linked lists"],
     [0, "Trees"],
+    [0, "Graphs"]
 ];
 
 var arrayGeneral = [
