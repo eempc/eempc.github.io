@@ -66,7 +66,8 @@ var arrayGeneral = [
     [2, "Git version control"],
     [1, "SLDC"],
     [0, "SOLID"],
-    [1, "TDD"],
+    [1, "TDD/BDD"],
+    [1, "UI/UX"]
 ];
 
 var arraySoftwarePackages = [
