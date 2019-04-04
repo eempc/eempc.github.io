@@ -1,7 +1,6 @@
 
 
 // Load up my arrays and sort them because I can't be bothered to do it manually
-// Should become objects (tuple) in future
 var arrayConcepts = [
     [3, "Primitive data types"],
     [2, "Objects, classes, inheritance"],
@@ -52,7 +51,7 @@ var arrayFrontEnd = [
 
 var arrayDataStructures = [
     [3, "Arrays"],
-    [2, "Dictionary/Map"]
+    [3, "Dictionaries/Hashes"]
     [2, "Big O Complexity"],
     [1, "Stacks"],
     [1, "Queues"],
