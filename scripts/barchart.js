@@ -52,6 +52,7 @@ var arrayFrontEnd = [
 
 var arrayDataStructures = [
     [3, "Arrays"],
+    [2, "Dictionary/Map"]
     [2, "Big O Complexity"],
     [1, "Stacks"],
     [1, "Queues"],
