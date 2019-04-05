@@ -52,7 +52,7 @@ var arrayFrontEnd = [
 var arrayDataStructures = [
     [3, "Arrays"],
     [3, "Lists"],
-    [2, "Dictionaries/Hashes"]
+    [2, "Dictionaries/Hashes"],
     [2, "Big O Complexity"],
     [1, "Stacks"],
     [1, "Queues"],
@@ -65,7 +65,7 @@ var arrayGeneral = [
     [3, "Windows environments"],
     [2, "Ubuntu Linux environment"],
     [2, "Git version control"],
-    [1, "SLDC"],
+    [1, "SDLC"],
     [0, "SOLID"],
     [1, "TDD/BDD"],
     [1, "UI/UX"]
