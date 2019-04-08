@@ -37,3 +37,14 @@ function showSlides(n) {
     dots[slideIndex].classList.add("active");
     slideTexts[slideIndex].style.display = "flex";
 }
+
+function appendNumText() {
+    var numTextElements = document.getElementsByClassName("numbertext");
+    let count = numTextElements.length;
+
+    [...numTextElements].forEach(element => {
+        element.textContent += " / " + count;
+    });
+};
+
+appendNumText();
