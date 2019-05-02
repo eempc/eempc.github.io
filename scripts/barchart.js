@@ -19,7 +19,7 @@ var arrayLanguages = [
     [1, "Python"],
     [1, "Java"],
     [2, "JavaScript"],
-    [1, "XAML"],
+    [2, "XAML"],
     [3, "HTML"],
     [2, "CSS"],
     [1, "Ruby"],
@@ -28,12 +28,12 @@ var arrayLanguages = [
 ];
 
 var arrayDotNet = [
-  [3, "Windows Form controls"],
+  [3, "Windows Form"],
   [1, "Razor Pages"],
-  [1, "LINQ and SQL queries"],
+  [2, "LINQ and SQL queries"],
   [1, "WPF XAML"],
   [0, "Azure deployment"],
-  [0, "Xamarin"],
+  [2, "Xamarin"],
 ];
 
 var arrayFrontEnd = [
@@ -52,12 +52,12 @@ var arrayFrontEnd = [
 var arrayDataStructures = [
     [3, "Arrays"],
     [3, "Lists"],
-    [2, "Dictionaries/Hashes"],
+    [3, "Dictionaries/Hashes"],
     [2, "Big O Complexity"],
-    [1, "Stacks"],
-    [1, "Queues"],
+    [3, "Stacks"],
+    [3, "Queues"],
     [1, "Linked lists"],
-    [0, "Trees"],
+    [1, "Binary trees"],
     [0, "Graphs"]
 ];
 
