@@ -88,7 +88,6 @@ ul {
 li {
     padding-bottom: 0.25em;
     position: relative;
-
 }
 
 li span {
@@ -98,13 +97,11 @@ li span {
 
 #chart-section {
     padding-bottom: 60px;
-
 }
 
 #chart-container {
     max-width: 1000px;
     margin: auto;
-
 }
 
 .chart-select {

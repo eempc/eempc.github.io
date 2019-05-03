@@ -8,18 +8,18 @@ body {
 .primary-gradient {
     background: linear-gradient(
         135deg,
-        #5D4CEC 0%,
-        #5D4CEC 25%,
-        #5D4CEC 75%,
-        #5D4CEC 100%
+        #8b81e2 0%,
+        #5D4CEC 33%,
+        #5D4CEC 66%,
+        #8b81e2 100%
     );
 }
 
 .secondary-gradient {
     background: repeating-linear-gradient(45deg,
         #8194FD 0%,
-        #8194FD 25%,
-        #8194FD 50%
+        #8194FD 50%,
+        #8194FD 100%
     );
 }
 
