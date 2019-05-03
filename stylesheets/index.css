@@ -81,10 +81,19 @@ h3 {
 ul {
     align-self: flex-start;
     list-style-type: circle;
+    box-sizing: content-box;
+    width: 100%;
 }
 
 li {
     padding-bottom: 0.25em;
+    position: relative;
+
+}
+
+li span {
+    position: absolute;
+    right: 20px;
 }
 
 #chart-section {
