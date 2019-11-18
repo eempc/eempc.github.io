@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Calculator</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="calculator.css" />
+</head>
+
+<body>
+
+  <main>
+    <div id="frame">
+      <div id="heading">
+        <h1>Calculator</h1>
+      </div>
+
+      <div class="screen">
+        <p id="screen0"></p>
+        <p id="screen1"></p>
+      </div>
+
+      <div id="container">
+        <div class="button" onclick="toggleNegative()">±</div>
+        <div class="button" onclick="random()">RNG</div>
+        <div class="button" onclick="backspace()">BCK</div>
+        <div class="button" onclick="clearAll()">CLR</div>
+
+        <div class="button num">7</div>
+        <div class="button num">8</div>
+        <div class="button num">9</div>
+        <div class="button op">/</div>
+
+        <div class="button num">4</div>
+        <div class="button num">5</div>
+        <div class="button num">6</div>
+        <div class="button op">*</div>
+
+        <div class="button num">1</div>
+        <div class="button num">2</div>
+        <div class="button num">3</div>
+        <div class="button op">-</div>
+
+        <div class="button num">0</div>
+        <div class="button decimal" onclick="screenAppendDecimal()">.</div>
+        <div class="button" onclick="operate()">=</div>
+        <div class="button op">+</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="calculator.js" async defer></script>
+</body>
+
+</html>
